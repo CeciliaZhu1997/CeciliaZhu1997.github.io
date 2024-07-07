@@ -22,9 +22,9 @@ favicon: https://github.com/lemonchann/lemonchann.github.io/raw/master/images/fa
 navigation:
   - name: Home
     url: /
-  - name: About me
-    url: /about
   - name: Research
+    url: /about
+  - name: Career
     url: /archive
   - name: Awards
     url: /tags
@@ -41,14 +41,14 @@ footer-links:
   #weibo: frommidworld #请输入你的微博个性域名 https://www.weibo.com/<thispart>
   behance: # https://www.behance.net/<username>
   dribbble:
-  #zhihu: ning-meng-cheng-31-94
+  zhihu:
   email: dongdong.zhu@student.uva.nl
   facebook:
   flickr:
+  linkedin: dongdong-zhu-aa3033129
   github: CeciliaZhu1997
   googleplus: # anything in your profile username that comes after plus.google.com/
   instagram:
-  linkedin: www.linkedin.com/in/dongdong-zhu-aa3033129
   pinterest:
   rss: # just type anything here for a working RSS icon
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
@@ -66,16 +66,16 @@ disqus: # fromendworld
 # Gitalk
 gitalk:
   clientID: Ov23liXUyO9DcV9780QV
-  clientSecret: d0220762c05c2d6b6f6152a0f0e4b6b090de9729
-  repo: lemonchann.github.io
-  owner: lemonchann
+  clientSecret: cc99b91b5f2d44a84f6207bdae8c998e0c2570f6
+  repo: CeciliaZhu1997.github.io
+  owner: CeciliaZhu1997
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-#google_analytics: 
+google_analytics: G-J13XRW5ZPJ
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://lemonchann.github.io
+url: https://ceciliazhu1997.github.io/
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
