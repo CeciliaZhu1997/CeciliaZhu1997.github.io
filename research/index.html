@@ -11,28 +11,26 @@ permalink: /research/
 
 <div class="tags">
   <ul class="label">
-    <li>
-      <a href="#research">
-        <span>research</span>
-        <span class="count">{{ research_posts | size }}</span>
-      </a>
-    </li>
+    {% if research_posts %}
+      <li>
+        <a href="#research">
+          <span>research</span>
+          <span class="count">{{ research_posts | size }}</span>
+        </a>
+      </li>
+    {% endif %}
   </ul>
 
   {% if research_posts %}
-    <h2 id="research">research</h2>
+    <h2 id="research">Research</h2>
     <ul class="tag">
       {% for post in research_posts %}
-        {% if post.title != null %}
+        {% if post.title %}
           <li>
-            {% if post.link %}
-              <a href="{{ post.link }}">
-            {% else %}
-              <a href="{{ site.baseurl }}{{ post.url }}">
-            {% endif %}
-                {{ post.title }}
-              </a>
-              <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title }}
+            </a>
+            <time>{{ post.date | date: "%Y-%m-%d" }}</time>
           </li>
         {% endif %}
       {% endfor %}
