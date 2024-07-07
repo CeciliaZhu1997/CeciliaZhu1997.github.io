@@ -10,29 +10,15 @@ permalink: /career/
 {% endif %}
 
 <div class="tags">
-  <ul class="label">
-    <li>
-      <a href="#career">
-        <span>career</span>
-        <span class="count">{{ career_posts | size }}</span>
-      </a>
-    </li>
-  </ul>
-
   {% if career_posts %}
-    <h2 id="career">career</h2>
     <ul class="tag">
       {% for post in career_posts %}
-        {% if post.title != null %}
+        {% if post.title %}
           <li>
-            {% if post.link %}
-              <a href="{{ post.link }}">
-            {% else %}
-              <a href="{{ site.baseurl }}{{ post.url }}">
-            {% endif %}
-                {{ post.title }}
-              </a>
-              <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title }}
+            </a>
+            <time>{{ post.date | date: "%Y-%m-%d" }}</time>
           </li>
         {% endif %}
       {% endfor %}
