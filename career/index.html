@@ -1,24 +1,22 @@
 ---
 layout: page
-title: Tags
-permalink: /tags/
+title: Career
+permalink: /career/
 ---
+{% assign career_posts = site.tags.career %}
 
-{% if site.posts.size == 0 %}
+{% if career_posts == null or career_posts.size == 0 %}
   <h2>No post found</h2>
 {% endif %}
 
 <div class="tags">
   <ul class="label">
-    {% assign career_posts = site.tags.career %}
-    {% if career_posts %}
-      <li>
-        <a href="#career">
-          <span>career</span>
-          <span class="count">{{ career_posts | size }}</span>
-        </a>
-      </li>
-    {% endif %}
+    <li>
+      <a href="#career">
+        <span>career</span>
+        <span class="count">{{ career_posts | size }}</span>
+      </a>
+    </li>
   </ul>
 
   {% if career_posts %}
@@ -41,4 +39,3 @@ permalink: /tags/
     </ul>
   {% endif %}
 </div>
-
