@@ -27,7 +27,7 @@ navigation:
   - name: Research
     url: /archive
   - name: Career
-    url: /tags
+    url: /career
   - name: CV
     url: /tags
 
