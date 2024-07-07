@@ -1,20 +1,11 @@
 ---
 layout: page
-title: About
+title: About me
 permalink: /about/
 ---
 
-## 关于我
-你好，我是程序员柠檬。
+I am currently a research master’s student in the Department of Communication Science at the University of Amsterdam. Prior to this, I completed my first master’s degree in Media and Communications at the London School of Economics and Political Science in 2019, and my bachelor’s degree at the School of Journalism, Renmin University of China, in 2018. My research interests include the diversity of online self-presentations of females, the impact of algorithms on social media users’ behavior, and the use of computational methods in the social sciences.
 
-国内一线互联网大厂计算机软件工程师、[知乎](https://www.zhihu.com/people/ning-meng-cheng-31-94)编程领域万赞答主。
+From 2020 to 2023, I worked as a marketing specialist in the tech industry and completed several globally influential online and offline campaigns.
 
-[个人技术公众号](https://mp.weixin.qq.com/mp/homepage?__biz=MzkwOTE2OTY1Nw==&hid=1&sn=6395e40d884ce4dd3900a68a0f5a6b87&scene=18#wechat_redirect)分享编程学习路线、编程学习资源，记录技术成长，欢迎扫码添加：
-
-![公众号二维码](https://github.com/lemonchann/images/raw/master/gzh/%E6%96%87%E6%9C%AB%E6%8E%A8%E5%B9%BF%E6%96%87%E6%A1%88.png)
-
-
-
-## 版权声明
-
-博客文章是我原创文章，存档于_posts 文件夹下，版权归我所有，转载请与我联系获得授权许可。
+Check out my website for more!
