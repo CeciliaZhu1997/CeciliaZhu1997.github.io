@@ -25,7 +25,7 @@ navigation:
   - name: About
     url: /about
   - name: Research
-    url: /archive
+    url: /research
   - name: Career
     url: /career
   - name: CV
