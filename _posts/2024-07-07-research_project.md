@@ -14,8 +14,8 @@ This study aims to explore housewives’ digital expression based on 1800 videos
 The research question of this study is as follows:<br>
 *RQ*: Do housewife-related videos on social media tend to express depression? 
 
-The hypotheses are as follows:
-*H1*: Compared to videos related to working women, housewife-related videos on social media express a higher level of depression.
+The hypotheses are as follows:<br>
+*H1*: Compared to videos related to working women, housewife-related videos on social media express a higher level of depression.<br>
 *H2*: Compared to daily vlog videos, housewife-related videos on social media express a higher level of depression.
 
 Supervised machine learning (SML) was used in this study to detect depression from the transcripts of the video database. Using the Bag of Words approach, multiple classifiers were trained with this labeled dataset after pre-processing. Finally, the Support Vector Machine with Tfidf Vectorizer was selected, achieving a performance accuracy of 0.93.
