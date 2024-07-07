@@ -10,19 +10,7 @@ permalink: /research/
 {% endif %}
 
 <div class="tags">
-  <ul class="label">
-    {% if research_posts %}
-      <li>
-        <a href="#research">
-          <span>research</span>
-          <span class="count">{{ research_posts | size }}</span>
-        </a>
-      </li>
-    {% endif %}
-  </ul>
-
   {% if research_posts %}
-    <h2 id="research">Research</h2>
     <ul class="tag">
       {% for post in research_posts %}
         {% if post.title %}
