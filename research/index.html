@@ -1,38 +1,41 @@
 ---
 layout: page
-title: Research
-permalink: /research/
+title: Research Tags
+permalink: /tags/research/
 ---
+{% assign research_posts = site.tags.research %}
 
-{% assign research_posts = site.posts | where: "tags", "research" %}
-
-{% if research_posts.size == 0 %}
+{% if research_posts == null or research_posts.size == 0 %}
   <h2>No post found</h2>
 {% endif %}
 
-<ul class="archive">
-  {% for post in research_posts %}
-    {% unless post.next %}
-      <h2>{{ post.date | date: '%Y' }}</h2>
-    {% else %}
-      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-      {% if year != nyear %}
-        <h2>{{ post.date | date: '%Y' }}</h2>
-      {% endif %}
-    {% endunless %}
-
+<div class="tags">
+  <ul class="label">
     <li>
-      {% if post.link %}
-      <a href="{{ post.link }}">
-      {% else %}
-      <a href="{{ site.baseurl }}{{ post.url }}">
-      {% endif %}
-        {{ post.title }}
+      <a href="#research">
+        <span>research</span>
+        <span class="count">{{ research_posts | size }}</span>
       </a>
-      <time>{{ post.date | date: "%Y-%m-%d" }}</time>
     </li>
-  {% endfor %}
-</ul>
+  </ul>
 
-
+  {% if research_posts %}
+    <h2 id="research">research</h2>
+    <ul class="tag">
+      {% for post in research_posts %}
+        {% if post.title != null %}
+          <li>
+            {% if post.link %}
+              <a href="{{ post.link }}">
+            {% else %}
+              <a href="{{ site.baseurl }}{{ post.url }}">
+            {% endif %}
+                {{ post.title }}
+              </a>
+              <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
