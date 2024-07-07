@@ -2,7 +2,7 @@
 layout: post
 title: "Welcome to my website!"
 date:   2024-07-07
-tags: [introduction]
+tags: [career]
 comments: true
 author: dongdong
 ---
