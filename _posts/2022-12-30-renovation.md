@@ -9,6 +9,11 @@ author: Dongdong
 
 I led a very meaningful project during my three-year work experience at Xiaomi. The project involved using Xiaomi Smart AIoT products to renovate the homes of brand users **for free** who were in need.
 
+The participants in this project include:
+- A poor but lovely family from the Philippines. The elder daughter registered for the event and asked if we could provide her with a better study environment and reduce her mother's burden.
+- A couple from Vietnam who adopted several children and are seeking better living environments for the kids.
+- A doctor from Italy who contributed significantly during the pandemic and wishes to have a relaxing home environment for himself and his mother.
+
 My role in this project was as follows:
 
 - **Establish Activity Mechanism**: Set up event landing pages and create a complete event process, including recruiting candidates, screening, contacting interior designers, and completing home renovations based on candidates' needs. Ensure the delivery of products and on-site renovations globally, including in Western Europe, Southeast Asia, and Latin America.
