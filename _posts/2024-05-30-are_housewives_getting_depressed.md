@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[ICA Accepted] Are housewives getting depressed? A machine learning study based on YouTube"
+title: "[ICA Accepted] Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube"
 date:   2024-05-30
 tags: [research]
 comments: true
