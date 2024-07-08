@@ -40,13 +40,13 @@ Here are some of the article links (in Chinese):
 [9] A Glimpse into the Gender Landscape of the Overseas News Industry: Slow Progress, Persistent Imbalance<br>
 [《海外新闻业性别现状一瞥：艰难进步，依然失衡》](https://mp.weixin.qq.com/s/9SHK3E-pzH43e2isfBxn3g)
 
-[10] An Open Letter from Digital Natives: How Technology is 'Reshaping' Millennials'<br>
+[10] An Open Letter from Digital Natives: How Technology is 'Reshaping' Millennials<br>
 [《来自数字原住民的公开信 ：技术如何「重塑」千禧一代》](https://mp.weixin.qq.com/s/GZXAnZrsV-P8pyIhTlx-1Q)
 
 [11] Wave of Mergers Sweeping Overseas: Fighting Platform Giants—Is Banding Together the Survival Strategy?<br>
 [《合并浪潮席卷海外：对抗平台巨头，抱团取暖是求生良方吗？》](https://mp.weixin.qq.com/s/caBw-mjPnj0OkOZR6NGb_g)
 
-[12] ‘Climate Emergency’ Named 2019 Word of the Year: How Does the Global News Industry Report on Climate Change?<br>
+[12] 'Climate Emergency' Named 2019 Word of the Year: How Does the Global News Industry Report on Climate Change?<br>
 [《“气候紧急状态”成2019年度词汇，海外新闻业如何报道气候变化？》](https://mp.weixin.qq.com/s/PjUmTVLFqBYWlzGNgDiMsg)
 
 [13] Overseas Social Media in the 2010s: Platforms with 2 Billion Monthly Active Users, User Anxiety, and the Desire to Escape<br>
@@ -78,10 +78,10 @@ Here are some of the article links (in Chinese):
 [21] The Era of Celebrity Chasing 2.0: Thought Fans Were Just Mindlessly Idolizing? Their Professional Stardom Creation Skills Surpass Your Imagination<br>
 [《追星2.0时代：还以为粉丝只会无脑吹？他们的造星专业力超乎你想象》](https://mp.weixin.qq.com/s/KST0tOyzBSWPgBjiWGRGJQ) 
 
-[22] The Twilight Era of Superstar: The "Idol Story" from Trainees to Virtual Celebrities, Incubating More Than Just Traffic<br>
+[22] The Twilight Era of Superstar: The 'Idol Story' from Trainees to Virtual Celebrities, Incubating More Than Just Traffic<br>
 [《天王黄昏时代的「偶像物语」:从练习生到虚拟爱豆，孵化的不止是流量》](https://mp.weixin.qq.com/s/4eD0Rs707-YtowxPrWU-4A)
 
-[23] After the Explosion: Chaos Ensues. Can Phenomenon-Level Image Apps Escape the Fate of "Monthly Disposables"?<br>
+[23] After the Explosion: Chaos Ensues. Can Phenomenon-Level Image Apps Escape the Fate of 'Monthly Disposables'?<br>
 [爆火之后一地鸡毛，现象级图像APP是否难逃「月抛」宿命？](https://mp.weixin.qq.com/s/echrnz4xO28KnVi2bx5yWw)
 
 
