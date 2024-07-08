@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Campaign] "Make Smart Living a Reality for Everyone!"
+title: "[Campaign] Make Smart Living a Reality for Everyone!"
 date: 2022-12-31
 tags: [career]
 comments: true
