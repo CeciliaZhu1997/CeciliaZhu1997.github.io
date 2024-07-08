@@ -63,7 +63,7 @@ Here are some of the article links (in Chinese):
 [16] Uncovering the Kingdom of Social Shakers: The Realm of Pai Pai Qi and His 30 Million Subjects<br>
 [《起底社会摇的内容王国：牌牌琦和他的3000万臣民》](https://mp.weixin.qq.com/s/U_gHcvVpEYyHjOxsMBv-Iw)  
 
-[17] The Frog is Fake, the 'Empty Nest' Loneliness of the 90s Generation is Real<br>
+[17] The Frog is Fake, the 'Empty Nest' Loneliness of the 90s Generation is Real <br>
 [《蛙是假的，90后空巢青年的“孤单寂寞冷”才是真的》](http://mp.weixin.qq.com/s/ELC-3RBoq3XM7COdcAVzhA)
 
 [18] The Commodification of Girlish Hearts: How 'Otome' Culture Disrupts the Content Market from Social Media to Gaming<br>
