@@ -69,7 +69,7 @@ Here are some of the article links (in Chinese):
 [18] The Commodification of Girlish Hearts: How 'Otome' Culture Disrupts the Content Market from Social Media to Gaming<br>
 [《被"贩卖"的少女心：从社交到游戏，「乙女」文化如何搅动内容市场》](http://mp.weixin.qq.com/s/R-pQzVUy2u0-4nV6bniblQ)  
 
-[19] I have twenty social media apps but can't make a single friend.
+[19] I Have Twenty Social Media Apps but Can't Make a Single Friend.<br>
 [《我有二十个社交APP，交不到一个朋友》](https://mp.weixin.qq.com/s/kYfzwN5X2drEbO9ILIVYyA)
 
 [20] The Fog is on Fire: More Than Just Catharsis! New Leading Female Roles Aim to Break Away From Tradition<br>
