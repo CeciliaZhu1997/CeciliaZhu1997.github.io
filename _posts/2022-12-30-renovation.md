@@ -19,4 +19,6 @@ The event and relevant videos/posts achieved significant influence globally, rea
 
 [1] Xiaomi Renovation Philippines <https://youtu.be/m4ZX84QHNBc?si=PiXZN8LaeCEgR0lQ>
 
-[2] Xiaomi Renovation Italy <https://youtu.be/3CNRGhWH11g?si=wn0LWNFJRuP7hpNG>
+[2] Xiaomi Renovation Vietnam <https://youtu.be/p3I_preGCsA?si=Mnm5Q9tBMB1IZDve>
+
+[3] Xiaomi Renovation Italy <https://youtu.be/3CNRGhWH11g?si=wn0LWNFJRuP7hpNG>
