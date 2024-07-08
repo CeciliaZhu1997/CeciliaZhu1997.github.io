@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Publications] Media Analysis Articles that I Published from 2017 to 2020"
+title: "[Publication] Media Analysis Articles that I Published from 2017 to 2020"
 date: 2020-03-01
 tags: [career]
 comments: true
