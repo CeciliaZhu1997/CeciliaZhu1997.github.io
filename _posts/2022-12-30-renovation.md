@@ -17,6 +17,6 @@ My role in this project was as follows:
 
 The event and relevant videos/posts achieved significant influence globally, reaching over 18 million impressions, 10 million views, and over 50 thousand registrants in total. Here are some of the videos produced under my supervision:
 
-[1] [Xiaomi Renovation Philippines](https://youtu.be/m4ZX84QHNBc?si=PiXZN8LaeCEgR0lQ)
-[2] [Xiaomi Renovation Vietnam](https://youtu.be/p3I_preGCsA?si=Mnm5Q9tBMB1IZDve)
-[3] [Xiaomi Renovation Italy](https://youtu.be/3CNRGhWH11g?si=wn0LWNFJRuP7hpNG)
+[1] [Xiaomi Renovation Philippines](https://youtu.be/m4ZX84QHNBc?si=PiXZN8LaeCEgR0lQ)<br>
+[2] [Xiaomi Renovation Vietnam](https://youtu.be/p3I_preGCsA?si=Mnm5Q9tBMB1IZDve)<br>
+[3] [Xiaomi Renovation Italy](https://youtu.be/3CNRGhWH11g?si=wn0LWNFJRuP7hpNG)<br>
