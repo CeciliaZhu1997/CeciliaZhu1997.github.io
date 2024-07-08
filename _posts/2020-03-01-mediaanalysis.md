@@ -7,7 +7,7 @@ comments: true
 author: Dongdong
 ---
 
-I started working as a freelancer for Tencent, one of the biggest Internet companies in China, from 2017 to 2020. My main job was to write articles related to the latest domestic and global social media trends and news consumption. Over the three years, I wrote over 300,000 Chinese characters and received a total readership of over 25,000, with many articles reposted by influential media outlets nationwide.
+I started working as a freelancer for Tencent, one of the biggest Internet companies in China, from 2017 to 2020. My main job was to write articles related to the latest domestic and global social media trends and news consumption. Over the three years, I wrote over 300,000 Chinese characters and received a total readership of over 250,000, with many articles reposted by influential media outlets nationwide.
 
 Here are some of the article links (in Chinese):
 
@@ -51,7 +51,8 @@ Here are some of the article links (in Chinese):
 
 [13] Overseas Social Media in the 2010s: Platforms with 2 Billion Monthly Active Users, User Anxiety, and the Desire to Escape<br>
 [《海外社交媒体的2010年代：平台月活20亿，用户焦虑盼逃离》](https://mp.weixin.qq.com/s/zgUD7v9P9Rw0PWXneR4VTg)
-
+<br>
+<br>
 <h4>Chinese Media Trends Observation</h4>
 
 [14] Caught in 'Meme Therapy' Beyond Recovery: Is Downgrading to Memes a Shared Destiny for Creators and Readers?<br>
