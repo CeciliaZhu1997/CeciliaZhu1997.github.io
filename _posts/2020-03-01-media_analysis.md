@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Publication] Media Analysis Articles that I Published from 2017 to 2020"
+title: "[Publications] Media Analysis Articles that I Published from 2017 to 2020"
 date: 2020-03-01
 tags: [career]
 comments: true
@@ -11,7 +11,7 @@ I started working as a freelancer for Tencent, one of the biggest Internet compa
 
 Here are some of the article links (in Chinese):
 
-<h4>Global Media Trends Observation</h4>
+<h3>Global Media Trends Observation</h3>
 
 [1] Overview of Topic-Based Products: How News Platforms Are Beginning to Implement Shallow Social Interactions and What Ideas Can Be Learned<br>
 [《话题类产品全景观察:资讯端开始做浅层社交,哪些产品小心思可以借鉴?》](https://mp.weixin.qq.com/s/AUou10lWSteu0j3PvMfBfw)  
@@ -53,7 +53,7 @@ Here are some of the article links (in Chinese):
 [《海外社交媒体的2010年代：平台月活20亿，用户焦虑盼逃离》](https://mp.weixin.qq.com/s/zgUD7v9P9Rw0PWXneR4VTg)
 <br>
 <br>
-<h4>Chinese Media Trends Observation</h4>
+<h3>Chinese Media Trends Observation</h3>
 
 [14] Caught in 'Meme Therapy' Beyond Recovery: Is Downgrading to Memes a Shared Destiny for Creators and Readers?<br>
 [《深陷“雕疗”无法自拔：沙雕化降格，是表达者和读者的共同宿命吗？》](https://mp.weixin.qq.com/s/JiuAGXLrja6r24_8cXgpmw) 
