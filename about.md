@@ -9,9 +9,9 @@ I am Dongdong Zhu, a research master’s student in the Department of Communicat
 From 2020 to 2023, I worked as a marketing specialist in the tech industry and completed several globally influential online and offline campaigns.
 
 <h3>Education Background</h3>
-- 2023.09 ~ 2025.06, Research Master, Department of Communication Science, ASCoR, University of Amsterdam<hr>
-- 2018.09 ~ 2019.11, Master of Science, Department of Media and Communications, London School of Economics and Political Science<hr>
-- 2014.09 ~ 2018.06, Bachelor of Arts, School of Journalism, Renmin University of China<hr>
+- 2023.09 ~ 2025.06, Research Master, Department of Communication Science, ASCoR, University of Amsterdam
+- 2018.09 ~ 2019.11, Master of Science, Department of Media and Communications, London School of Economics and Political Science
+- 2014.09 ~ 2018.06, Bachelor of Arts, School of Journalism, Renmin University of China
 
 <h3>Professional Background</h3>
 - 2023.02 ~ 2023.06, Operation Specialist, Department of Operation, DoraHacks
