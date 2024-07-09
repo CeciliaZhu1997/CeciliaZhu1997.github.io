@@ -4,9 +4,11 @@ title: About
 permalink: /about/
 ---
 
-I am Dongdong Zhu, a research master’s student in the Department of Communication Science at the University of Amsterdam. Before this, I completed my first master’s degree in Media and Communications at the London School of Economics and Political Science in 2019, and my bachelor’s degree at the School of Journalism, Renmin University of China, in 2018. My research interests include the diversity of online self-presentations of females, the impact of algorithms on social media users’ behavior, and the use of computational methods in the social sciences.
+Welcome to Dongdong's Planet!
 
-From 2020 to 2023, I worked as a marketing specialist in the tech industry and completed several globally influential online and offline campaigns.
+I hail from rural China but kicked off my college journey in the capital city. Along the way, I have pursued a myriad of passions: exploring social media, engaging in marketing, and clinching a world record. At 25, I decided to return to campus to resume my academic pursuits after three years focused away from research, driven by the desire to understand the causes of things, as emphasized by the motto of my alumni school at LSE.
+
+Always stay positive and conquer every challenge!
 
 *****************
 <h2>Academic Profile</h2>
@@ -51,11 +53,9 @@ From 2020 to 2023, I worked as a marketing specialist in the tech industry and c
 - 2017.02 ~ 2017.05, Intern, China Central Television, Beijing, China<br>
 
 <h3>Pulications</h3>
-- [List of Media Analysis Articles](https://ceciliazhu1997.github.io/media_analysis/)
+- [Published over 50 media analysis articles](https://ceciliazhu1997.github.io/media_analysis/)
 
 <h3>Marketing Career Achievements</h3>
-- [Set the world record by celebrating New Year's across 24 timezones in one live stream.](https://ceciliazhu1997.github.io/24_new_years/)
-- Organized an online event encouraging 27 thousand people to start running every day.
-- [Helped families in need achieve smart living for free.](https://ceciliazhu1997.github.io/renovation/)
-
-
+- [Set the world record by celebrating New Year's across 24 timezones in one livestream.](https://ceciliazhu1997.github.io/24_new_years/)<br>
+- Organized an online event encouraging 27 thousand people to start running every day.<br>
+- [Helped families in need achieve smart living for free.](https://ceciliazhu1997.github.io/renovation/)<br>
