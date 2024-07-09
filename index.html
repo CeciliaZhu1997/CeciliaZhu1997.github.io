@@ -3,17 +3,23 @@ layout: default
 ---
 
 <div class="about-content">
-  {% include about.md %}
+  {% assign about_file = site.pages | where: "name", "about.md" | first %}
+  {% if about_file %}
+    {{ about_file.content | markdownify }}
+  {% else %}
+    <p>About page content not found.</p>
+  {% endif %}
 </div>
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div align="center">
-  <span id="busuanzi_container_site_pv" style="font-family:Consolas;color:Silver;font-size:12px;">
-    View: <span id="busuanzi_value_site_pv" style="font-family:Consolas;color:Silver;font-size:12px;"></span>
+  <span id="busuanzi_container_site_pv" style="font-family: Consolas; color: Silver; font-size: 12px;">
+    View: <span id="busuanzi_value_site_pv" style="font-family: Consolas; color: Silver; font-size: 12px;"></span>
   </span>
-  <span id="busuanzi_container_site_uv" style="font-family:Consolas;color:Silver;font-size:12px;">
-    User: <span id="busuanzi_value_site_uv" style="font-family:Consolas;color:Silver;font-size:12px;"></span>
+  <span id="busuanzi_container_site_uv" style="font-family: Consolas; color: Silver; font-size: 12px;">
+    User: <span id="busuanzi_value_site_uv" style="font-family: Consolas; color: Silver; font-size: 12px;"></span>
   </span>
 </div>
+
 
 
