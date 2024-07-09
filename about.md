@@ -50,7 +50,7 @@ My research interests involve females' social media expressions and individuals'
 <h3>Publications</h3>
 - [List from 2017 to 2020](https://ceciliazhu1997.github.io/media_analysis/)<br>
 
-<h3>Marketing Career Achievements</h3>
+<h3>Achievements</h3>
 - [Set the world record by celebrating New Year's across 24 timezones in one livestream.](https://ceciliazhu1997.github.io/24_new_years/)<br>
 - Organized an online event encouraging 27 thousand people to start running every day.<br>
 - [Helped families in need achieve smart living for free.](https://ceciliazhu1997.github.io/renovation/)<br>
