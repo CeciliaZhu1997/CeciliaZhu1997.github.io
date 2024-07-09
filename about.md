@@ -53,9 +53,13 @@ Always stay positive and conquer every challenge!
 - 2017.02 ~ 2017.05, Intern, China Central Television, Beijing, China<br>
 
 <h3>Pulications</h3>
-- [Published over 50 media analysis articles](https://ceciliazhu1997.github.io/media_analysis/)
+- [Published over 50 media analysis articles](https://ceciliazhu1997.github.io/media_analysis/)<br>
 
 <h3>Marketing Career Achievements</h3>
 - [Set the world record by celebrating New Year's across 24 timezones in one livestream.](https://ceciliazhu1997.github.io/24_new_years/)<br>
 - Organized an online event encouraging 27 thousand people to start running every day.<br>
 - [Helped families in need achieve smart living for free.](https://ceciliazhu1997.github.io/renovation/)<br>
+<br>
+<br>
+<br>
+<br>
