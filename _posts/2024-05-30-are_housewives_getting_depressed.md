@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Computational Content Analysis] Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube"
+title: "[Conference] Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube"
 date:   2024-05-30
 tags: [research]
 comments: true
