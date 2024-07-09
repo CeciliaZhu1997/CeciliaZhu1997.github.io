@@ -7,7 +7,7 @@ comments: true
 author: Dongdong
 ---
 
-I led a very meaningful project during my three-year work experience at Xiaomi. The project involved using Xiaomi Smart AIoT products to renovate the homes of brand users **for free** who were in need.
+I led a very meaningful project during my three-year work experience at Xiaomi. The project involved using Xiaomi Smart AIoT products to renovate the homes of brand users for free who were in need.
 
 The participants in this project include:
 - A poor but lovely family from the Philippines. The elder daughter registered for the event and asked if we could provide her with a better study environment and reduce her mother's burden.
