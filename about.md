@@ -28,13 +28,13 @@ My research interests involve females' social media expressions and individuals'
 [*Click here for more detailed information.*](https://ceciliazhu1997.github.io/research/)
 
 <h3>Honor & Awards</h3>
-- National Encouragement Scholarship(1/22), 2017<br>
+- National Encouragement Scholarship (1/22), 2017<br>
 - Outstanding Student Leader Award of RUC, 2017<br>
 - Second Prize of Undergraduate Research Foundation, 2017<br>
 - Excellent Works Prize, AD Campus Spring Competition China, 2017<br>
 - Scholarship of RUC, 2016<br>
 - Outstanding Student Leader Award of RUC, 2016<br>
-- National Encouragement Scholarship(1/22), 2015<br>
+- National Encouragement Scholarship (1/22), 2015<br>
 
 <h3>Skills</h3>
 - **Languages**: Mandarin (native), English (fluent)<br>
