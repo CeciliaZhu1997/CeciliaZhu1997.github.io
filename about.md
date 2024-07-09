@@ -36,6 +36,12 @@ My research interests involve females' social media expressions and individuals'
 - Outstanding Student Leader Award of RUC, 2016<br>
 - National Encouragement Scholarship(1/22), 2015<br>
 
+<h3>Skills</h3>
+- **Languages**: Mandarin(native), English(fluent)
+- **Programming Languages**: R, Python
+- **Statistics**: SPSS, Gephi
+- **Design**: Adobe Premiere, Adobe Photoshop
+
 *****************
 <h2>Professional Profile</h2>
 
