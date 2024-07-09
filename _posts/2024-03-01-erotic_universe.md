@@ -7,7 +7,7 @@ comments: true
 author: Dongdong
 ---
 
-***This research is from the coursework on Content Analysis.***
+***This research was from the coursework on Content Analysis at the University of Amsterdam.***
 
 A recent trend observed on a number of websites featuring Boys’ love (BL) content is the popularity of hermaphrodite erotic novels in pan-Chinese areas. Departure from the traditional BL narrative archetype, the uke role in hermaphrodite stories, while typically assuming a male social identity, tends to be depicted as possessing both male and female genitalia. As few studies focused on this phenomenon, where females are actively and extensively engaging in creating images of hermaphrodites as a means to fulfil their sexual fantasies, this study conducted a quantitive content analysis based on 131 BL and hermaphrodite erotic novels, to investigate the relationship between the uke characters in those novels and the readership.
 
