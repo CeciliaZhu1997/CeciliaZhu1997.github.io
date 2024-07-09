@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Coursework] "Neither Females nor Males" vs. "Both Females and Males": Female Readers’ Preference on Erotic Fantasy Universe"
-date:   2024-03-30
+date: 2024-03-30
 tags: [research]
 comments: true
 author: Dongdong
