@@ -17,7 +17,7 @@ I hail from rural China but kicked off my college journey in the capital city. A
 - 2014.09 ~ 2018.06, Bachelor of Arts, School of Journalism, Renmin University of China<br>
 
 <h3>Conference</h3>
-**Zhu, D.**(2024, June 23). *Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube*. 74th International Communication Association Regional Hub Beijing, Beijing, China.
+**Zhu, D.** (2024, June 23). *Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube*. 74th International Communication Association Regional Hub Beijing, Beijing, China.
 
 <h3>Research Projects</h3> 
 - 2024.05 ~ 2024.11, Research Assistant, *Developing a Comparative Media Dataset from Web Crawl Data for Communication Science Research*, ASCoR, University of Amsterdam<br>
@@ -42,7 +42,7 @@ I hail from rural China but kicked off my college journey in the capital city. A
 *****************
 <h2>Professional Profile</h2>
 
-<h3>Professional Experience</h3>
+<h3>Career Background</h3>
 - 2023.02 ~ 2023.06, Operation Specialist, Department of Operation, DoraHacks, Remote<br>
 - 2020.03 ~ 2023.02, Marketing Specialist, Department of Global Marketing, Xiaomi, Beijing, China<br>
 - 2017.11 ~ 2020.03, Freelancer, Platform and Content Group, Tencent, Remote<br>
