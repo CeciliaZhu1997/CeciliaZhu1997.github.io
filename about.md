@@ -1,7 +1,7 @@
 <br>
 Welcome to Dongdong's Planet!<br>
-
-I hail from rural China but kicked off my college journey in the capital city. Along the way, I have pursued a myriad of passions: exploring social media, engaging in marketing, setting a world record, and helping those in need. At 25, I decided to return to campus to resume my academic pursuits after three years focused away from research, driven by the desire to know the causes of things, as emphasized by the motto of my alumni school at LSE.<br>
+<br>
+My name is Dongdong, and I am currently a research master's student at the University of Amsterdam. I hail from rural China but kicked off my college journey in the capital city. Along the way, I have pursued a myriad of passions: exploring social media, engaging in marketing, setting a world record, and helping those in need. At 25, I decided to return to campus to resume my academic pursuits after three years focused away from research, driven by the desire to know the causes of things, as emphasized by the motto of my alumni school at LSE.<br>
 
 My research interests involve females' social media expressions and individuals' news consumption. Regarding research methods, I am particularly interested in content analysis, including qualitative, quantitative, and computational approaches.
 
