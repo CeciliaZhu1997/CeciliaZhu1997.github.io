@@ -21,8 +21,7 @@ Always stay positive and conquer every challenge!
 <h3>Conference</h3>
 **Zhu, D.**(2024, June 23). *Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube*. 74th International Communication Association Regional Hub Beijing, Beijing, China.
 
-<h3>Research Projects</h3>
-[For More Detailed Information](https://ceciliazhu1997.github.io/research/) 
+<h3>Research Projects</h3> ([Read More](https://ceciliazhu1997.github.io/research/)
 - 2024.05 ~ 2024.11, Research Assistant, *Developing a Comparative Media Dataset from Web Crawl Data for Communication Science Research*, ASCoR, University of Amsterdam<br>
 - 2024.03 ~ 2024.11, Research Assistant, *Infotainment on TikTok: Effects of entertaining features in TikTok news videos on knowledge about news issues*, ASCoR, University of Amsterdam<br>
 - 2024.03, Coursework, *'Neither Females nor Males' vs. 'Both Females and Males': Female Readers’ Preference on Erotic Fantasy Universe*, Content Analysis, University of Amsterdam<br>
