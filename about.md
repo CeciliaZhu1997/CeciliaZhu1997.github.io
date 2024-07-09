@@ -9,17 +9,17 @@ I am Dongdong Zhu, a research master’s student in the Department of Communicat
 From 2020 to 2023, I worked as a marketing specialist in the tech industry and completed several globally influential online and offline campaigns.
 
 <h3>Education Background</h3>
-- 2023.09 ~ 2025.06, Research Master, Department of Communication Science, ASCoR, University of Amsterdam
-- 2018.09 ~ 2019.11, Master of Science, Department of Media and Communications, London School of Economics and Political Science
-- 2014.09 ~ 2018.06, Bachelor of Arts, School of Journalism, Renmin University of China
+- 2023.09 ~ 2025.06, Research Master, Department of Communication Science, ASCoR, University of Amsterdam<br>
+- 2018.09 ~ 2019.11, Master of Science, Department of Media and Communications, London School of Economics and Political Science<br>
+- 2014.09 ~ 2018.06, Bachelor of Arts, School of Journalism, Renmin University of China<br>
 
 <h3>Professional Background</h3>
-- 2023.02 ~ 2023.06, Operation Specialist, Department of Operation, DoraHacks
-- 2020.03 ~ 2023.02, Marketing Specialist, Department of Global Marketing, Xiaomi
-- 2018.03 ~ 2020.03, Freelancer, Platform and Content Group, Tencent
-- 2017.11 ~ 2018.03, Intern, Platform and Content Group, Tencent
-- 2017.05 ~ 2017.08, Intern, MSL China, Publicis Groupe
-- 2017.02 ~ 2017.05, Intern, China Central Television
+- 2023.02 ~ 2023.06, Operation Specialist, Department of Operation, DoraHacks<br>
+- 2020.03 ~ 2023.02, Marketing Specialist, Department of Global Marketing, Xiaomi<br>
+- 2018.03 ~ 2020.03, Freelancer, Platform and Content Group, Tencent<br>
+- 2017.11 ~ 2018.03, Intern, Platform and Content Group, Tencent<br>
+- 2017.05 ~ 2017.08, Intern, MSL China, Publicis Groupe<br>
+- 2017.02 ~ 2017.05, Intern, China Central Television<br>
 
 <h3>Honor & Awards</h3>
 - 
