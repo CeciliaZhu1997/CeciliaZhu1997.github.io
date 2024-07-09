@@ -6,7 +6,7 @@ permalink: /about/
 
 Welcome to Dongdong's Planet!
 
-I hail from rural China but kicked off my college journey in the capital city. Along the way, I have pursued a myriad of passions: exploring social media, engaging in marketing, and clinching a world record. At 25, I decided to return to campus to resume my academic pursuits after three years focused away from research, driven by the desire to understand the causes of things, as emphasized by the motto of my alumni school at LSE.
+I hail from rural China but kicked off my college journey in the capital city. Along the way, I have pursued a myriad of passions: exploring social media, engaging in marketing, and setting a world record. At 25, I decided to return to campus to resume my academic pursuits after three years focused away from research, driven by the desire to understand the causes of things, as emphasized by the motto of my alumni school at LSE.
 
 Always stay positive and conquer every challenge!
 
