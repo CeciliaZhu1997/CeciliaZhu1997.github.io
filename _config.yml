@@ -20,16 +20,12 @@ favicon: https://github.com/lemonchann/lemonchann.github.io/raw/master/images/fa
 # and URL Link(e.g. 'Theme' tab below) tabs. If you don't need one, just delete
 # it from the list(Delete '- name: ' and 'url: ', too!)
 navigation:
-#  - name: Home
-#    url: /
   - name: Home
     url: /about
   - name: Research
     url: /research
   - name: Career
     url: /career
- # - name: CV
- #   url: /cv
    - name: Blog
     url: /blog
 
