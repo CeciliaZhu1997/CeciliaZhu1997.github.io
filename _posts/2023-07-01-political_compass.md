@@ -15,8 +15,6 @@ Created in 2017, r/PoliticalCompassMemes grew in popularity in 2020 as a space t
 
 While I worked in Subgroup 1, our group specifically used PixPlot to explore visual semantic space. Since the dataset of political compass memes was collected before the summer school, we focused on applying different methods of analysis to make sense of the data: mixed methods with the combination of quantitative methods using 4CAT and Pixplot as well as qualitative analysis. For each flair, we generated a random sample of 2000 memes to narrow the sample size. We then processed those random flair-based samples in Pixplot to get the clusters based on similarities of memes.
 
-<br>
 ![Results of 8,000 Image Clusters](/images/political_compass/results_of_pixplot_analysis.png)
-<br>
 
 Next, using the Pixplot as our foundation, we applied a qualitative analysis of the frequent semiotic resources in each group of memes. We looked through all the clusters from each flair and categorised frequent types of semiotic resources coded into memes. After we classified the clusters of semantic resources and symbols, we performed a comparative analysis based on flairs to figure out how serious political concepts are translated into memes. Three frequent types of semiotic resources can be identified in each flair: public figures, flags, and symbols.
