@@ -37,7 +37,7 @@ My research interests involve females' social media expressions and individuals'
 - National Encouragement Scholarship(1/22), 2015<br>
 
 <h3>Skills</h3>
-- **Languages**: Mandarin(native), English(fluent)<br>
+- **Languages**: Mandarin (native), English (fluent)<br>
 - **Programming Languages**: R, Python<br>
 - **Statistics**: SPSS, Gephi<br>
 - **Design**: Adobe Premiere, Adobe Photoshop<br>
