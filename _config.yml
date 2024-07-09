@@ -29,7 +29,7 @@ navigation:
   - name: Career
     url: /career
   - name: CV
-    url: /tags
+    url: /cv
 
 # Pagination
 paginate: 8
