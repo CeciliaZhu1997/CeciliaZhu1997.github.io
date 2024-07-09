@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="about-content">
-  {{ site.static_files | where: "path", "/path/to/about.md" | first | markdownify }}
+  {{ site.static_files | where: "path", "about.md" | first | markdownify }}
 </div>
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
