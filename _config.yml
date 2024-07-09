@@ -28,7 +28,7 @@ navigation:
     url: /research
   - name: Career
     url: /career
-   - name: Blog
+  - name: Blog
     url: /blog
 
 # Pagination
