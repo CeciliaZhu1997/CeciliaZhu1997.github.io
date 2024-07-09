@@ -28,7 +28,7 @@ I hail from rural China but kicked off my college journey in the capital city. A
 - 2019.08, Thesis, *Females, Male Homosexuality and Gender Hegemony: A Qualitative Analysis of Boy’s Love Novels in the Chinese Context*, Department of Media and Communications, London School of Economics and Political Science<br>
 - 2018.06, Thesis, *Innovation in Discourse Writing of We-Media Accounts: Taking the Jiang Ge Tokyo Murder Case as an Example*, School of Journalism, Renmin University of China<br>
 - 2017.11, Report, *Innovation in Communicating Public Information with New Media - a Case Study of the Yinchuan Government*, Undergraduate Research Foundation, Renmin University of China<br>
-[Click here for more detailed information.](https://ceciliazhu1997.github.io/research/)
+[*Click here for more detailed information.*](https://ceciliazhu1997.github.io/research/)
 
 <h3>Honor & Awards</h3>
 - National Encouragement Scholarship(1/22), 2017<br>
