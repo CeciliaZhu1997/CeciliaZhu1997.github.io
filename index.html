@@ -3,10 +3,7 @@ layout: default
 ---
 
 <div class="about-content">
-  {% capture about_content %}
-    {% include_relative about.md %}
-  {% endcapture %}
-  {{ about_content | markdownify }}
+  {% include about.md %}
 </div>
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -18,4 +15,5 @@ layout: default
     User: <span id="busuanzi_value_site_uv" style="font-family:Consolas;color:Silver;font-size:12px;"></span>
   </span>
 </div>
+
 
