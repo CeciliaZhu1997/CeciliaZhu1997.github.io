@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Thesis] Innovation in the Writing Discourse of We-Media Accounts: A Qualitative Content Analysis of WeChat Articles Related to the Jiang Ge Tokyo Murder Case"
-date: 2019-08-31
+date: 2018-08-31
 tags: [research]
 comments: true
 author: Dongdong
