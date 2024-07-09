@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Thesis] Females, Male Homosexuality and Gender Hegemony: A Qualitative Analysis of Boys' Love Novels in the Chinese Context"
+title: "[Thesis] Females, Male Homosexuality and Gender Hegemony: A Critical Discourse Analysis of Boys' Love Novels in the Chinese Context"
 date: 2019-08-31
 tags: [research]
 comments: true
