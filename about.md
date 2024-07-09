@@ -49,8 +49,8 @@ I hail from rural China but kicked off my college journey in the capital city. A
 - 2017.05 ~ 2017.08, Intern, MSL China, Publicis Groupe, Beijing, China<br>
 - 2017.02 ~ 2017.05, Intern, China Central Television, Beijing, China<br>
 
-<h3>Pulications</h3>
-- [Published over 50 media analysis articles](https://ceciliazhu1997.github.io/media_analysis/)<br>
+<h3>Publications</h3>
+- [List from 2017 to 2020](https://ceciliazhu1997.github.io/media_analysis/)<br>
 
 <h3>Marketing Career Achievements</h3>
 - [Set the world record by celebrating New Year's across 24 timezones in one livestream.](https://ceciliazhu1997.github.io/24_new_years/)<br>
