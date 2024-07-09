@@ -18,5 +18,4 @@ While I worked in Subgroup 1, our group specifically used PixPlot to explore vis
 
 ![Results of 8,000 Image Clusters](/images/political_compass/results_of_pixplot_analysis.png)
 
-<br>
 Next, using the Pixplot as our foundation, we applied a qualitative analysis of the frequent semiotic resources in each group of memes. We looked through all the clusters from each flair and categorised frequent types of semiotic resources coded into memes. After we classified the clusters of semantic resources and symbols, we performed a comparative analysis based on flairs to figure out how serious political concepts are translated into memes. Three frequent types of semiotic resources can be identified in each flair: public figures, flags, and symbols.
