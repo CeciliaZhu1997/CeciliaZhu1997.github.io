@@ -12,6 +12,7 @@ My research interests involve females' social media expressions and individuals'
 - 2023.09 ~ 2025.06, Research Master, Department of Communication Science, ASCoR, University of Amsterdam<br>
 - 2018.09 ~ 2019.11, Master of Science, Department of Media and Communications, London School of Economics and Political Science<br>
 - 2014.09 ~ 2018.06, Bachelor of Arts, School of Journalism, Renmin University of China<br>
+- 2016.09 ~ 2017/01, Exchange Student, School of Communication, National Chengchi University<br>
 
 <h3>Conference</h3>
 **Zhu, D.** (2024, June 23). *Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube*. 74th International Communication Association Regional Hub Beijing, Beijing, China.
@@ -56,7 +57,7 @@ My research interests involve females' social media expressions and individuals'
 <h3>Publications</h3>
 - [List from 2017 to 2020](https://ceciliazhu1997.github.io/media_analysis/)<br>
 
-<h3>Achievements</h3>
+<h3>Marketing Achievements</h3>
 - [Set the world record by celebrating New Year's across 24 timezones in one livestream.](https://ceciliazhu1997.github.io/24_new_years/)<br>
 - Organized an online event encouraging 27 thousand people to start running every day.<br>
 - [Helped families in need achieve smart living for free.](https://ceciliazhu1997.github.io/renovation/)<br>
