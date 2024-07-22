@@ -15,17 +15,16 @@ My research interests involve females' social media expressions and individuals'
 - 2016.09 ~ 2017.01, Exchange Student, School of Communication, National Chengchi University<br>
 
 <h3>Conference</h3>
-**Zhu, D.** (2024, June 23). *Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube*. 74th International Communication Association Regional Hub Beijing, Beijing, China.
+**Zhu, D.** (2024, June 23). *Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube*. 74th International Communication Association Regional Hub Beijing, Beijing, China. [[Link]](https://ceciliazhu1997.github.io/are_housewives_getting_depressed/)
 
 <h3>Research Projects</h3> 
 - 2024.05 ~ 2024.11, Research Assistant, *Developing a Comparative Media Dataset from Web Crawl Data for Communication Science Research*, ASCoR, University of Amsterdam<br>
 - 2024.03 ~ 2024.11, Research Assistant, *Infotainment on TikTok: Effects of entertaining features in TikTok news videos on knowledge about news issues*, ASCoR, University of Amsterdam<br>
 - 2023.07, Workshop, *The Divine Online? Mapping Algorithmic Conspirituality on TikTok*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/tiktok_conspirituality/)<br>
-- 2023.07, Workshop, *Revolution By Other Memes: Online Subcultures, Modular Ideologies And The Political Compass*, Digital Methods Initiative Summer School, University of Amsterdam<br>
-- 2019.08, Thesis, *Females, Male Homosexuality and Gender Hegemony: A Qualitative Analysis of Boy’s Love Novels in the Chinese Context*, Department of Media and Communications, London School of Economics and Political Science<br>
-- 2018.06, Thesis, *Innovation in Discourse Writing of We-Media Accounts: Taking the Jiang Ge Tokyo Murder Case as an Example*, School of Journalism, Renmin University of China<br>
-- 2017.11, Report, *Innovation in Communicating Public Information with New Media - a Case Study of the Yinchuan Government*, Undergraduate Research Foundation, Renmin University of China<br>
-[*Click here for more detailed information.*](https://ceciliazhu1997.github.io/research/)
+- 2023.07, Workshop, *Revolution By Other Memes: Online Subcultures, Modular Ideologies And The Political Compass*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/political_compass/)<br>
+- 2019.08, Thesis, *Females, Male Homosexuality and Gender Hegemony: A Qualitative Analysis of Boy’s Love Novels in the Chinese Context*, Department of Media and Communications, London School of Economics and Political Science [[Link]](https://ceciliazhu1997.github.io/lse_theis/)<br>
+- 2018.06, Thesis, *Innovation in Discourse Writing of We-Media Accounts: Taking the Jiang Ge Tokyo Murder Case as an Example*, School of Journalism, Renmin University of China [[Link]](https://ceciliazhu1997.github.io/ruc_thesis/)<br>
+- 2017.11, Report, *Innovation in Communicating Public Information with New Media - a Case Study of the Yinchuan Government*, Undergraduate Research Foundation, Renmin University of China <br>
 
 <h3>Honor & Awards</h3>
 - National Encouragement Scholarship (1/22), 2017<br>
