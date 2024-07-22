@@ -15,7 +15,7 @@ My research interests involve females' social media expressions and individuals'
 - 2016.09 ~ 2017.01, Exchange Student, School of Communication, National Chengchi University<br>
 
 <h3>Conference</h3>
-**Zhu, D.** (2024, June 23). *Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube*. 74th International Communication Association Regional Hub Beijing, Beijing, China. [[Link]](https://ceciliazhu1997.github.io/are_housewives_getting_depressed/)
+**Zhu, D.** (2024, June 23). *Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube*. 74th International Communication Association Regional Hub, Beijing, China. [[Link]](https://ceciliazhu1997.github.io/are_housewives_getting_depressed/)
 
 <h3>Research Projects</h3> 
 - 2024.05 ~ 2024.11, Research Assistant, *Developing a Comparative Media Dataset from Web Crawl Data for Communication Science Research*, ASCoR, University of Amsterdam<br>
