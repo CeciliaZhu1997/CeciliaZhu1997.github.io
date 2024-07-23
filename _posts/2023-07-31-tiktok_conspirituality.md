@@ -11,7 +11,7 @@ author: Dongdong
 
 [Full Project Link](https://www.digitalmethods.net/Dmi/TheDivineOnline)
 
-<h4>Project Introduction</h4>
+<h3>Introduction</h3>
 
 Conspirituality is a politico-spiritual philosophy from Ward and Voas (2011) which draws attention towards the idea that individuals interested in spirituality and alternative belief systems exhibit flexibility towards traditional belief systems or organizational structures and privilege alternative, even deviant or stigmatized, claims to truth. These individuals, therefore, run the risk of entertaining or promoting various conspiracy theories online. Our project examines this phenomenon within the context of algorithm-dominated platforms (i.e. TikTok) to further understand how people come to know their own social, political, and religious/spiritual realities. Further, the dynamic of humanalgorithm relations introduces an additional layer of complexity in the formation of ideas related to algorithms. This curiosity can be best described by the idea of algorithmic conspirituality which brings together ideas related to faith in algorithms, spirituality, and conspiracy (Cotter et al., 2022).
 
@@ -19,7 +19,7 @@ Such faith in algorithms, however, troubles their place within contemporary digi
 
 Central to TikTok's design is the curated, auto-play feed of the 'For You' page (FYP). We begin by exploring the algorithmic dissemination of conspirituality within the FYP through a series of new, personalized accounts and varied prompting strategies. Our prompting also ventures beyond TikTok's 'For You' page and into the sonic and visual features of the platform. In doing so, we observe the powerful role these features play in directing the transmission of affect and knowledge as well as producing, circulating, and shaping discourses online. Across each subgroup of this project, we unravel the energetic forces which shape user scrolling experiences and delve into a potent realm where digital, political, and miraculous healing experiences intertwine.
 
-<h4>My Contributions</h4>
+<h3>My Contributions</h3>
 
 We investigated the algorithmic recommendation system of the TikTok platform, specifically focusing on spirituality. To carry out our study, we created a blank account with a birth year set to 2000. Using this account, we searched for the keyword "spiritual awakening" and watched the top 29 most popular videos out of a total of 396 search results, based on view count.
 
