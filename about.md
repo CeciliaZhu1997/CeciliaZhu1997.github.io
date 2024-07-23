@@ -17,7 +17,7 @@ My research interests involve females' social media expressions and individuals'
 <h3>Conference</h3>
 **Zhu, D.** (2024, June 23). *Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube*. 74th International Communication Association Regional Hub, Beijing, China. [[Link]](https://ceciliazhu1997.github.io/are_housewives_getting_depressed/)
 
-<h3>Research Projects</h3> 
+<h3>Research Experience</h3> 
 - 2024.05 ~ 2024.11, Research Assistant, *Developing a Comparative Media Dataset from Web Crawl Data for Communication Science Research*, ASCoR, University of Amsterdam [In Progress]<br>
 - 2024.03 ~ 2024.11, Research Assistant, *Infotainment on TikTok: Effects of entertaining features in TikTok news videos on knowledge about news issues*, ASCoR, University of Amsterdam [In Progress]<br>
 - 2023.07, Workshop, *The Divine Online? Mapping Algorithmic Conspirituality on TikTok*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/tiktok_conspirituality/)<br>
@@ -36,7 +36,7 @@ My research interests involve females' social media expressions and individuals'
 - National Encouragement Scholarship (1/22), 2015<br>
 
 <h3>Skills</h3>
-- **Languages**: Mandarin (native), English (fluent)<br>
+- **Languages**: Mandarin (Native), English (Fluent)<br>
 - **Programming Languages**: R, Python<br>
 - **Statistics**: SPSS, Gephi<br>
 - **Design**: Adobe Premiere, Adobe Photoshop<br>
@@ -53,12 +53,12 @@ My research interests involve females' social media expressions and individuals'
 - 2017.02 ~ 2017.05, Intern, China Central Television, Beijing, China<br>
 
 <h3>Publications</h3>
-- [List from 2017 to 2020](https://ceciliazhu1997.github.io/media_analysis/)<br>
+- [Publications from 2017 to 2020](https://ceciliazhu1997.github.io/media_analysis/)<br>
 
 <h3>Marketing Achievements</h3>
-- [Set the world record by celebrating New Year's across 24 timezones in one livestream.](https://ceciliazhu1997.github.io/24_new_years/)<br>
-- [Organized an online event encouraging 27 thousand people to start running every day.](https://ceciliazhu1997.github.io/poprun/)<br>
-- [Helped families in need achieve smart living for free.](https://ceciliazhu1997.github.io/renovation/)<br>
+- [Streamed New Year's Across 24 Timezones in One Livestream: First-Ever Global Celebration](https://ceciliazhu1997.github.io/24_new_years/)<br>
+- [Led Successful Online Challenge: 27,000 Participants Embraced Daily Running](https://ceciliazhu1997.github.io/poprun/)<br>
+- [Empowered Families in Need Through Free Smart Living Solutions](https://ceciliazhu1997.github.io/renovation/)<br>
 <br>
 <br>
 <br>
