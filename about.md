@@ -19,7 +19,7 @@ My research interests lie in exploring the social implications of artificial int
 
 <h3>Research Experience</h3> 
 - 2024.05 ~ 2024.11, Research Assistant, *Developing a Comparative Media Dataset from Web Crawl Data for Communication Science Research*, ASCoR, University of Amsterdam [In Progress]<br>
-- 2024.03 ~ 2024.11, Research Assistant, *Infotainment on TikTok: Effects of entertaining features in TikTok news videos on knowledge about news issues*, ASCoR, University of Amsterdam [In Progress]<br>
+- 2024.03 ~ 2024.11, Research Assistant, *Infotainment on TikTok: Effects of Entertaining Features in TikTok News Videos on Knowledge about News Issues*, ASCoR, University of Amsterdam [In Progress]<br>
 - 2023.07, Workshop, *The Divine Online? Mapping Algorithmic Conspirituality on TikTok*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/tiktok_conspirituality/)<br>
 - 2023.07, Workshop, *Revolution By Other Memes: Online Subcultures, Modular Ideologies And The Political Compass*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/political_compass/)<br>
 - 2019.08, Thesis, *Females, Male Homosexuality and Gender Hegemony: A Qualitative Analysis of Boy’s Love Novels in the Chinese Context*, Department of Media and Communications, London School of Economics and Political Science [[Link]](https://ceciliazhu1997.github.io/lse_thesis/)<br>
