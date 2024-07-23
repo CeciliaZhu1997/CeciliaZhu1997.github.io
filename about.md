@@ -22,7 +22,7 @@ My research interests involve females' social media expressions and individuals'
 - 2024.03 ~ 2024.11, Research Assistant, *Infotainment on TikTok: Effects of entertaining features in TikTok news videos on knowledge about news issues*, ASCoR, University of Amsterdam<br>
 - 2023.07, Workshop, *The Divine Online? Mapping Algorithmic Conspirituality on TikTok*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/tiktok_conspirituality/)<br>
 - 2023.07, Workshop, *Revolution By Other Memes: Online Subcultures, Modular Ideologies And The Political Compass*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/political_compass/)<br>
-- 2019.08, Thesis, *Females, Male Homosexuality and Gender Hegemony: A Qualitative Analysis of Boy’s Love Novels in the Chinese Context*, Department of Media and Communications, London School of Economics and Political Science [[Link]](https://ceciliazhu1997.github.io/lse_theis/)<br>
+- 2019.08, Thesis, *Females, Male Homosexuality and Gender Hegemony: A Qualitative Analysis of Boy’s Love Novels in the Chinese Context*, Department of Media and Communications, London School of Economics and Political Science [[Link]](https://ceciliazhu1997.github.io/lse_thesis/)<br>
 - 2018.06, Thesis, *Innovation in Discourse Writing of We-Media Accounts: Taking the Jiang Ge Tokyo Murder Case as an Example*, School of Journalism, Renmin University of China [[Link]](https://ceciliazhu1997.github.io/ruc_thesis/)<br>
 - 2017.11, Report, *Innovation in Communicating Public Information with New Media - a Case Study of the Yinchuan Government*, Undergraduate Research Foundation, Renmin University of China <br>
 
