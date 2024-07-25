@@ -7,7 +7,7 @@ comments: true
 author: Dongdong
 ---
 
-I started working as a freelancer for Tencent, one of the biggest Internet companies in China, from 2017 to 2020. My main job was to write articles related to the latest domestic and global social media trends and news consumption. Over the three years, I wrote over 300,000 Chinese characters and received a total readership of over 250,000, with many articles reposted by influential media outlets nationwide.
+I started working as a freelancer for Tencent, one of the biggest Internet companies in China, from 2017 to 2020. My main job was to write articles related to the latest domestic and global social media trends and news consumption. Over the three years, I wrote over 300,000 Chinese characters and received a total readership of over 2.5 million, with many articles reposted by influential media outlets nationwide.
 
 Here are some of the article links (in Chinese):
 
