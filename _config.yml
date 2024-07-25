@@ -26,8 +26,8 @@ navigation:
     url: /research
   - name: Career
     url: /career
-  - name: Blog
-    url: /blog
+#  - name: Blog
+#    url: /blog
 
 # Pagination
 paginate: 8
@@ -62,11 +62,11 @@ footer-text: Contact Me
 disqus: # fromendworld
 
 # Gitalk
-gitalk:
-  clientID: Ov23liXUyO9DcV9780QV
-  clientSecret: cc99b91b5f2d44a84f6207bdae8c998e0c2570f6
-  repo: CeciliaZhu1997.github.io
-  owner: CeciliaZhu1997
+#gitalk:
+#  clientID: Ov23liXUyO9DcV9780QV
+#  clientSecret: cc99b91b5f2d44a84f6207bdae8c998e0c2570f6
+#  repo: CeciliaZhu1997.github.io
+#  owner: CeciliaZhu1997
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: G-J13XRW5ZPJ
