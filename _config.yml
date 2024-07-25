@@ -26,6 +26,8 @@ navigation:
     url: /research
   - name: Career
     url: /career
+  - name: CV
+    url: /cv
 #  - name: Blog
 #    url: /blog
 
