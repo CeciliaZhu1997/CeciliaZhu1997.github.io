@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Thesis] Innovation in the Writing Discourse of We-Media Accounts: A Qualitative Content Analysis of WeChat Articles Related to the Jiang Ge Tokyo Murder Case"
+title: "[Thesis] Innovation in Writing of We-Media Accounts: A Case Study of the Jiang Ge Tokyo Murder Trial"
 date: 2018-08-31
 tags: [research]
 comments: true
