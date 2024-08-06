@@ -1,7 +1,7 @@
 <br>
 Hello!
 
-I'm Dongdong, a research master's student at the University of Amsterdam. Originally from rural China, I began my college journey in the capital city. My path has been filled with diverse passions: exploring social media, engaging in marketing, setting a world record, and helping those in need. Driven by a desire to understand the root causes of things, a motto I embraced during my time at the London School of Economics and Political Science, I decided to return to academia at 25 after a three-year period of career exploration.
+I'm Dongdong, a research master's student at the University of Amsterdam. Originally from rural China, I began my college journey in the capital city. My path has been filled with diverse passions: exploring social media, engaging in marketing, setting a world record, and helping those in need. Driven by a desire to understand the root causes of things, a motto I embraced during my time at the London School of Economics and Political Science, I decided to return to academia at 25 after a four-year period of career exploration.
 
 My research interests lie in exploring the social implications of artificial intelligence and algorithms through critical lenses like feminism and decolonial digital activism. I leverage computational methods to conduct this research.
 
