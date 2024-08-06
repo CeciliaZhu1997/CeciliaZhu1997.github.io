@@ -27,17 +27,17 @@ My research interests lie in exploring the social implications of artificial int
 - 2017.11, Report, *Innovation in Communicating Public Information with New Media - a Case Study of the Yinchuan Government*, Undergraduate Research Foundation, Renmin University of China <br>
 
 <h3>Honor & Awards</h3>
-- National Encouragement Scholarship (1/22), 2017<br>
+- National Encouragement Scholarship of China (1/22), 2017<br>
 - Outstanding Student Leader Award of RUC, 2017<br>
-- Second Prize of Undergraduate Research Foundation, 2017<br>
+- Second Prize, Undergraduate Research Foundation of RUC, 2017<br>
 - Excellent Works Prize, AD Campus Spring Competition China, 2017<br>
 - Scholarship of RUC, 2016<br>
 - Outstanding Student Leader Award of RUC, 2016<br>
-- National Encouragement Scholarship (1/22), 2015<br>
+- National Encouragement Scholarship of China (1/22), 2015<br>
 
 <h3>Skills</h3>
 - **Languages**: Mandarin (Native), English (Fluent)<br>
-- **Programming Languages**: R, Python<br>
+- **Programming Languages**: R, Python, Latex<br>
 - **Statistics**: SPSS, Gephi<br>
 - **Design**: Adobe Premiere, Adobe Photoshop<br>
 
