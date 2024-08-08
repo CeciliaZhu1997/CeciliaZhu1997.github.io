@@ -12,7 +12,7 @@ My research interests lie in exploring the social implications of artificial int
 - 2023.09 ~ 2025.06, Research Master, Department of Communication Science, ASCoR, University of Amsterdam<br>
 - 2018.09 ~ 2019.11, Master of Science, Department of Media and Communications, London School of Economics and Political Science<br>
 - 2014.09 ~ 2018.06, Bachelor of Arts, School of Journalism, Renmin University of China<br>
-- 2016.09 ~ 2017.01, Exchange Student, School of Communication, National Chengchi University<br>
+- 2016.09 ~ 2017.01, Exchange Student, College of Communication, National Chengchi University<br>
 
 <h3>Conference</h3>
 - **Zhu, D.** (2024, June 23). *Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube*. 74th International Communication Association Regional Hub, Beijing, China. [[Link]](https://ceciliazhu1997.github.io/are_housewives_getting_depressed/)
