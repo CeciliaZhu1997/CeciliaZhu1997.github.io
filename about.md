@@ -23,12 +23,20 @@ My research interests lie in exploring the social implications of artificial int
 - Wirz, D., Schäfer, S., Schneider, F., **Zhu, D.**, Tan, Y. *TikTok News and the Illusion of Knowledge: Effects of Thematic Framing and Emotionalization.* 
 
 <h3>Research Projects</h3> 
-- 2024.05, Coursework, *
-- 2024.01, Coursework, *Visualization of University Students' Alcohol Use, Snack Consumption, and Sports Participation*, Using R for data wrangling, analysis and visualization
-- 2023.07, Workshop, *The Divine Online? Mapping Algorithmic Conspirituality on TikTok*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/tiktok_conspirituality/)<br>
+
+<h4>Using Python</h4>
+- 2024.05, Coursework, *Exploring the Relationship Between Flight Directions, Terminals, and Scheduled Times at Schiphol Airport*, Big Data and Automated Content Analysis, University of Amsterdam [[Code]]
 - 2023.07, Workshop, *Revolution By Other Memes: Online Subcultures, Modular Ideologies And The Political Compass*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/political_compass/)<br>
+
+<h4>Data Visualization</h4>
+- 2024.01, Group coursework, *Visualization of University Students' Alcohol Use, Snack Consumption, and Sports Participation*, Using R for Data Wrangling, Analysis and Visualization, University of Amsterdam [Demo][Report]
+- 2023.07, Workshop, *The Divine Online? Mapping Algorithmic Conspirituality on TikTok*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/tiktok_conspirituality/)<br>
+
+<h4>Qualitative Studies</h4>
 - 2019.08, Thesis, *Females, Male Homosexuality and Gender Hegemony: A Qualitative Analysis of Boy’s Love Novels in the Chinese Context*, Department of Media and Communications, London School of Economics and Political Science [[Link]](https://ceciliazhu1997.github.io/lse_thesis/)<br>
 - 2018.06, Thesis, *Innovation in Discourse Writing of We-Media Accounts: Taking the Jiang Ge Tokyo Murder Case as an Example*, School of Journalism, Renmin University of China [[Link]](https://ceciliazhu1997.github.io/ruc_thesis/)<br>
+
+<h4>Undergraduate Practice</h4>
 - 2017.11, Report, *Innovation in Communicating Public Information with New Media - a Case Study of the Yinchuan Government*, Undergraduate Research Foundation, Renmin University of China <br>
 
 <h3>Honor & Awards</h3>
