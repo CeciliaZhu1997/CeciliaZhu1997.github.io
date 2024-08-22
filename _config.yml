@@ -30,8 +30,6 @@ navigation:
     url: /cv
 #  - name: Blog
 #    url: /blog
-  - name: r
-    url: /r
 
 # Pagination
 paginate: 8
