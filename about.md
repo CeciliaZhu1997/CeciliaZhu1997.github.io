@@ -16,7 +16,7 @@ My research interests lie in exploring the social implications of artificial int
 
 <h3>Publications</h3>
 <h4>Conference</h4>
-- **Zhu, D.** (2024, June 23). *Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube*. 74th International Communication Association Regional Hub, Beijing, China. [[Link]](https://ceciliazhu1997.github.io/are_housewives_getting_depressed/) [[Data]](https://github.com/CeciliaZhu1997/My-Code/blob/main/Housewife_data_collection.ipynb) [[Code]](https://github.com/CeciliaZhu1997/My-Code/blob/main/Housewife_data_analysis.ipynb))
+- **Zhu, D.** (2024, June 23). *Are Housewives Getting Depressed? A Machine Learning Study Based on YouTube*. 74th International Communication Association Regional Hub, Beijing, China. [[Link]](https://ceciliazhu1997.github.io/are_housewives_getting_depressed/) [[Code]](https://github.com/CeciliaZhu1997/My-Code/blob/main/Housewife_data_analysis.ipynb)
 
 <h4>Work in Progress</h4>
 - Strycharz, J., Möller, M., Ho, J., **Zhu, D.**, Huo, Q. *Developing a Comparative Media Dataset from Web Crawl Data for Communication Science Research.*
