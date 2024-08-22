@@ -22,14 +22,14 @@ My research interests lie in exploring the social implications of artificial int
 - Strycharz, J., Möller, M., Ho, J., **Zhu, D.**, Huo, Q. *Developing a Comparative Media Dataset from Web Crawl Data for Communication Science Research.*
 - Wirz, D., Schäfer, S., Schneider, F., **Zhu, D.**, Tan, Y. *TikTok News and the Illusion of Knowledge: Effects of Thematic Framing and Emotionalization.* 
 
-<h3>Research Projects</h3> 
+<h3>Projects</h3> 
 
 <h4>Using Python</h4>
 - 2024.05, Coursework, *Exploring the Relationship Between Flight Directions, Terminals, and Scheduled Times at Schiphol Airport*, Big Data and Automated Content Analysis, University of Amsterdam [[Code]](https://github.com/CeciliaZhu1997/My-Code/blob/main/Schipol.ipynb)
 - 2023.07, Workshop, *Revolution By Other Memes: Online Subcultures, Modular Ideologies And The Political Compass*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/political_compass/)<br>
 
 <h4>Data Visualization</h4>
-- 2024.01, Group coursework, *Visualization of University Students' Alcohol Use, Snack Consumption, and Sports Participation*, Using R for Data Wrangling, Analysis and Visualization, University of Amsterdam [Demo][[Code]](https://github.com/CeciliaZhu1997/My-Code/blob/main/alcohol_use.qmd)
+- 2024.01, Group coursework, *Visualization of University Students' Alcohol Use, Snack Consumption, and Sports Participation*, Using R for Data Wrangling, Analysis and Visualization, University of Amsterdam [Demo] [[Code]](https://github.com/CeciliaZhu1997/My-Code/blob/main/alcohol_use.qmd)
 - 2023.07, Workshop, *The Divine Online? Mapping Algorithmic Conspirituality on TikTok*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/tiktok_conspirituality/)<br>
 
 <h4>Qualitative Studies</h4>
@@ -40,13 +40,13 @@ My research interests lie in exploring the social implications of artificial int
 - 2017.11, Report, *Innovation in Communicating Public Information with New Media - a Case Study of the Yinchuan Government*, Undergraduate Research Foundation, Renmin University of China <br>
 
 <h3>Honor & Awards</h3>
-- National Encouragement Scholarship, Ministry of Education of China, 2017(1/22)<br>
+- National Encouragement Scholarship, Ministry of Education of China (1/22), 2017<br>
 - Outstanding Student Leader Award, Renmin University of China, 2017<br>
 - Second Prize, Undergraduate Research Foundation, Renmin University of China, 2017<br>
 - Excellent Works Prize, AD Campus Spring Competition of China, 2017<br>
 - Third Prize of Scholarship, Renmin University of China, 2016<br>
 - Outstanding Student Leader Award, Renmin University of China, 2016<br>
-- National Encouragement Scholarship, Ministry of Education of China, 2015(1/22)<br>
+- National Encouragement Scholarship, Ministry of Education of China (1/22), 2015<br>
 
 *****************
 <h2>Professional Profile</h2>
