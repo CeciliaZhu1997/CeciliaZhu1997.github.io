@@ -25,7 +25,7 @@ My research interests lie in exploring the social implications of artificial int
 <h3>Research Projects</h3> 
 
 <h4>Using Python</h4>
-- 2024.05, Coursework, *Exploring the Relationship Between Flight Directions, Terminals, and Scheduled Times at Schiphol Airport*, Big Data and Automated Content Analysis, University of Amsterdam [[Code]]
+- 2024.05, Coursework, *Exploring the Relationship Between Flight Directions, Terminals, and Scheduled Times at Schiphol Airport*, Big Data and Automated Content Analysis, University of Amsterdam [[Code]](https://github.com/CeciliaZhu1997/My-Code/blob/main/Schipol.ipynb)
 - 2023.07, Workshop, *Revolution By Other Memes: Online Subcultures, Modular Ideologies And The Political Compass*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/political_compass/)<br>
 
 <h4>Data Visualization</h4>
