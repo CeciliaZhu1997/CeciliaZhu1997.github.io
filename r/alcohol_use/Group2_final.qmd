@@ -1,0 +1,818 @@
+---
+title: "Group 2 Project Report"
+format: html
+editor: visual 
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = TRUE,echo = TRUE ,warning = FALSE,message = FALSE)
+```
+
+Author: Dongdong Zhu, Haochuan Liu, Yunhua Tan, Jiakun Liang, Zifan Huang
+
+The project this study selected is "Alcohol Posts and Alcohol Use". The packages we used are as follows: tidyverse[@tidyverse], dplyr[@dplyr], plotly[@plotly], RColorBrewer[@RColorBrewer], lubridate[@lubridate], ggthemes[@ggthemes], cowplot[@cowplot]
+
+```{r}
+library(tidyverse) 
+library(dplyr) 
+library(plotly)
+library(RColorBrewer)
+library(lubridate)
+library(ggthemes)
+library(cowplot)
+```
+
+# 1. Tidying Datasets
+
+## 1.1 Tidying Separated Tables
+
+This data project includes "Presurvey.csv", "DayData.csv", " WeekData.csv", "User.csv", "Comment.csv", "Like.csv", "Post.csv", "Login.csv".
+
+### 1.1.1 Tidying Table User
+
+This table comprises information about each user, including their UserID, role, Group number, and the experimental group to which they are allocated. "UserID" is the primary key in this table.
+
+Moreover, adhering to Principle 4, which suggests that each value must have its own cell, the variable 'Condition' has been split into two respective columns, which describe the types of fake alcohol posts in terms of positivity and sociality to which users were exposed during the last three weeks.
+
+```{r}
+#User.csv
+
+#clean data and find the primary key
+user <- read.csv("User.csv", na = c("NA", ""))
+user |> 
+  count(UserID) |> 
+  filter(n > 1 )
+
+#The primary key of login is "UserID"
+
+#Use Principle 4 to tidy up the data
+user <- user |>
+  separate_wider_delim(Condition, delim = "/", names = c("post_attitude", "post_social")) 
+
+```
+
+### 1.1.2 Tidying Table Presurvey
+
+The data in "presurvey.csv" is from the survey conducted one week before the start of (posting) data collection. Firstly, each participants were assigned to a unique UserID, then, two different aspects of information were included in the presurvey: one is participants basic demographic information and a series of personal characteristics that are related to the experiment, such as their previous drinking frequency (Alc_Freq_Normal) or drinking motivations (DMQ). The other is social network variables between the participants and other group members, such as the degree of familiarity (GroupMember_Familar).
+
+After initial exploration of the dataset, we found that all the social network variables were inconsistent with principle 2. The column headers of such variables were like GroupMember_x (x is a positive integer from 1 to 20) or GroupMember_x_Familiar: the column headers contained both data and column names. Hence, we use pivot_longer() function to lengthen the data.
+
+Then we found that there were two different units in the "Presurvey", the primary key of demographic and personal characteristics variables was "UserID”，while that for social network variables were "UserID” and "GroupMember_ID". This makes sense as personal information about the same individual is uniquely identified, but information about his or her relationship to different individuals may vary, i.e.,relationship information requires two identified individuals to determine. So we eventually split the "Presurvey.csv" into two tibble: "Individual.csv" and "Group.csv", the former contains demographic variables and personal characteristics related to the experiment, whose primary key is "UserID", the latter contains social network variables whose primary key is "UserID" and "GroupMember_ID".
+
+```{r}
+#Presurvey.csv
+
+presurvey <- read_csv("PreSurvey.csv") |>
+  distinct(UserID,.keep_all = T) # Delete the rows with duplicate UserIDs because the study requires that each participants fill out the presurvey only once.
+
+new_presurvey <- presurvey |> 
+  rename_with(
+    ~ ifelse(grepl("^GroupMember_[0-9]+$", .x), paste0(.x, "_GroupMember_ID"), .x),
+    everything()) |> # The grepl function and regular expression to match all coulmns that starts with groupmember and ends with numbers, if match, add the "_GroupMember_ID" suffix to the original name by renaming the column names. This step aims to rename the column like "GroupMember_x", after this, all columns headers that needed to be pivot would have the same pattern : GroupMember_X_Y. X is the referring group member, which is data, and Y is different variable. Then, we can use pivot_longer() function with names_to = c("group_member_number",".value") argument to deal with all the columns.
+  pivot_longer(
+    cols = starts_with("GroupMember_"), # choose all columns which their names start with " Groupmember".
+    names_to = c("group_member_number",".value"), # value of the chosen columns will go to two kinds of columns. As all the chosen columns have the same former part: GroupMember_X，these part will become the value of a new column whose name is "group_member_number", the ".value" means that the original value of the chosen columns will be remained with the latter part of the original column name as column name.
+    names_pattern = "(GroupMember_\\d+_)(\\w+)", # use regular expression specify separation ranges.
+    values_drop_na = TRUE 
+  ) |>
+  mutate(group_member_number = parse_number(group_member_number)) # Retain only the numeric portion of the value in the "groupmember number" column.
+
+#split the presurvey data
+individual <- new_presurvey |> 
+  select(UserID:SNSID_3) |> 
+  distinct() |>
+  separate_wider_delim(Alc_Freq_Normal, delim = ".", names = c("Alc_code", "Alc_freq")) |> # deal with a column that is inconsistent with principle 4.
+  select(-Alc_freq)|>
+  rename (Alc_freq = Alc_code) |>
+  write_csv("Individual.csv") #store the tibble as csv file.
+
+#split the presurvey data
+group <- new_presurvey |> 
+  select(UserID,group_member_number:Rangorde) |>
+  distinct(UserID,GroupMember_ID,.keep_all = TRUE) |>
+  write_csv("Group.csv")
+
+# Verify the primary key of user_presurvey dataset.
+individual |>
+  group_by(UserID) |>
+  mutate(n_identical = n()) |>
+  filter(n_identical > 1) |>
+  arrange(UserID) |> 
+  ungroup() 
+
+# Verify the primary key of group_presurvey dataset.
+group |>
+  group_by(UserID,GroupMember_ID) |>
+  mutate(n_identical = n()) |>
+  filter(n_identical > 1) |>
+  arrange(UserID) |> 
+  ungroup() 
+
+individual |> 
+  count(UserID) |> 
+  filter(n > 1 )
+
+#The primary key of individual is "UserID"
+##The primary key of group is the combination of "UserID" and "GroupMember_ID"
+```
+
+### 1.1.3 Tidying Table WeekData
+
+The WeekData dataset covers weekly survey data across 6 weeks. Each observation is the information collected from one survey filled by one participant. Most participants filled their survey once a week, while some participants forgot to take the survey for certain week(s) or take multiple surveys on the same date/week.
+
+The types of variables include: UserID, the time information and level of completion (e.g. StartDate, Duration, Finished), participants expectations for drinking alcohol (Alc_ASS), particpants' group/social pressure related to alcohol (Alc_IN, Alc_DN), and participants' usage of social network service (Sns). The first two types of variables are general information about the survey, while the rest are content of the survey or the characteristics of the participant. The "StartDate" and "EndDate" are dttm(datetime) variable, while the rest are recorded as dbl(numeric) variable. All the variables related to the characteristics of the participants are actually categorical but are recorded as numeric in coding. We can change any of it to factors through factor() according to the need of different analysis.
+
+We did not drop observations where the response is incomplete or the same participants take multiple surveys in one week because they are still useful for some research interest. If we need to drop any cases, we can use filter().
+
+```{r}
+#WeekData.csv
+weekdata <- read_csv("WeekData.csv", na =c("NA", ""))
+
+#This Dataset is tidy according to the four principles.
+
+#Determine the Primary Key
+weekdata |>
+  group_by(UserID, StartDate) |>
+  mutate(n_identical = n()) |>
+  filter(n_identical > 1) |>
+  arrange(UserID, StartDate) |> 
+  ungroup() 
+#The primary key of weekdata is the combination of "UserID" and "StartDate"
+```
+
+### 1.1.4 Tidying Table DayData
+
+The DayData dataset covers daily survey data across 43 days. Each observation is the information collected from one survey filled by one participant. Most participants filled their survey on a daily basis, while some participants forgot to take the survey in certain day(s) or take multiple surveys in the same day.
+
+The table consists of two parts: general information about the survey and measurements of participants. The first part includes variables: UserID, the time information and level of completion (e.g. StartDate, Duration, Finished). The "StartDate" and "EndDate" are dttm(datetime) variable, while the rest are recorded as dbl(numeric) variable. The second part is about individuals' measurements of alcohol use (Alc_Occ, Alc_Freq, Alc_Soc), sporting (Sport_Occ, Sport_Freq, Sport_Soc), sporting (Snack_Occ, Snack_Freq, Snack_Soc), and feelings. All the variables are actually categorical but are recorded as numeric in coding. We can change any of it to factors through factor() according to the need of different analysis.
+
+In the table, each row represents measurements of each participant taken from each day, with a single column "day_nr" representing the day number. Since each row has already represented a distinct case in the dataset, Principle 2 will not be applied. Additionally, the table contains only one type of case, that is, individuals' measurements of alcohol use, snacking, and sporting on a daily basis. Therefore, it is not necessary to split the table.
+
+```{r}
+#DayData.csv
+daydata <- read_csv("DayData.csv")
+
+# This Dataset is tidy according to the four principles.
+
+#Find Primary Key
+daydata |>
+  group_by(UserID,StartDate) |>
+  mutate(n_identical = n()) |>
+  filter(n_identical > 1) |>
+  arrange(UserID, StartDate) |> 
+  ungroup()
+#The primary keys of Daydata are "UserID", "day_nr", "StartDate". #Problem: Initially, we tried to select "UserID" and "StartDate" as primary keys, but we found some duplicate rows with the same combination of UserID and StartDate.
+
+#Clean Data
+#We only retain one of the duplicate rows with the same combination of UserID and StartDate, since we found that the rows contain the same combination of UserID and StartDate but different other elements. 
+daydata <- daydata |>
+  distinct(UserID,StartDate,.keep_all = T) |>
+  filter(!is.na(UserID))
+
+daydata |>
+  group_by(UserID,StartDate) |>
+  mutate(n_identical = n()) |>
+  filter(n_identical > 1) |>
+  arrange(UserID, StartDate) |> 
+  ungroup()
+# The primary key of daydata is the combination of "UserID" and "StartDate"
+```
+
+### 1.1.5 Tidying Table Like
+
+The Like dataset contains information about likes received by posts in the social networking site (SNS) tool during the experiment. There are two columns in the dataset: "LikerID" and "PostID". "LikerID" represents the unique identifier of the user who liked a post, while "PostID" represents the unique identifier of the post that received the like. These columns allow us to associate likes with specific users and the posts they engaged with in the SNS tool.The combination of "PostID" and "LikerID" serves as primary key.
+
+One thing needs to be noted, some users liked the same post twice. For example, the user with the LikerID 179 has liked the post with the PostID 4244, and this interaction has occurred 2 times. Therefore, we use distinct() function to clean up duplicated cases.
+
+```{r}
+# Like.csv
+like <- read_csv("Like.csv", col_names = TRUE)
+
+#This Dataset is tidy according to the four principles.
+
+# Find the primary key; there are only 2 variables in this table
+like |> 
+  count(LikerID, PostID) |> 
+  filter(n > 1) |>  
+  distinct(LikerID, PostID)
+#The primary key of like is the combination of "LikerID" and "PostID"
+```
+
+### 1.1.6 Tidying Table Login
+
+The dataset "Login" contains information about the times at which participants logged on to the SNS app. There are two columns in the table: "UserID" and "User_LoginTime". UserID represents the unique identification number assigned to each participant using the SNS app. User_LoginTime indicates the specific time at which a participant logged on to the SNS app. The primary key are "UserID" and "User_LoginTime".
+
+```{r}
+#Login.csv
+login <- read_csv("Login.csv", col_names = TRUE)
+
+#This Dataset is tidy according to the four principles.
+
+#Find the primary key
+login |> 
+  count(UserID, User_LoginTime) |> 
+  filter(n > 1) 
+#The primary key of login is the combination of "UserID" and "User_LoginTime"
+```
+
+### 1.1.7 Tidying Table Post
+
+The dataset "Post" contains information about the posts that participants encountered in a social networking site (SNS) tool during the six week experiment. This dataset provides detailed information about the post content, types, and engagement metrics of posts within the experimental SNS tool (e.g. alcoholpost, sportpost and snackpost), allowing for the analysis of participant interactions and responses to different types of posts. The primary key in this dataset are PostID" and "ViewerID".
+
+```{r}
+#Post.csv
+post <- read_csv("Post.csv", col_names = TRUE)
+
+#This Dataset is tidy according to the four principles.
+
+#Find the primary key
+post |> 
+  count(PostID, ViewerID) |> 
+  filter(n > 1) 
+#The primary key of login is the combination of "PostID" and "ViewerID"
+```
+
+### 1.1.8 Tidying Table Comment
+
+This table contains information about user comments, including PostID, CommentTime, CommenterID, and CommentContent. To ensure uniqueness in each row, the distinct() function was applied, filtering out comments posted repeatedly by the same person at the same time.
+
+The primary keys for this data are "PostID" and "CommentTime". The data adheres to tidy principles, and as such, no additional adjustments were necessary for this table.
+
+```{r}
+#Comment.csv
+comment <- read.csv("Comment.csv", na =c("NA", ""))
+
+#This Dataset is tidy according to the four principles.
+
+#Distinct rows to avoid identical comments from the same commenter posted simultaneously
+comment <- distinct(comment)
+
+#Find the primary key
+comment |> 
+  count(PostID, CommentTime) |> 
+  filter(n > 1)
+#The primary key is the combination of "PostID" and "CommentTime"
+
+```
+
+## 1.2 Table Merging and Foreign Keys Identification
+
+### Step 1
+
+The individual and user tibble share the primary key ("UserID"). Therefore, they are merged into the same tibble "userinfo" according to Principle 1 to increase the efficiency of data storage. This new tibble includes all the information/characteristics of each user.
+
+### Step 2
+
+Subsequently, we have 8 tibbles/datasets (userinfo, group, weekdata, daydata, post, comment, like, login) which have different primary keys.
+
+All these tibbles share the same foreign key "UserID", enabling the connection of different tibbles for various research interests. The mapping and keys of the tibbles are shown in ***Figure 1***. To make sure the merging is successful, we test for the merging of Userinfo to WeekData and Userinfo to DayData, which will be used in our individual visualization projects. With anti_join() function, we find that there are more UserIDs in Userinfo than in DayData and WeekData. This is because non-participants and some participants who only take the presurvey are not included in DayData and WeekData. We also find that these two merging cases (and the merging between UserID and all the other tibbles) are one-to-many relationships.
+
+Since each UserID occurs once in the "User" table, but might occur multiple times in the "DayData" table, so the relationship between these two tables is "one-to-many".
+
+![Figure 1 - The Mapping of All the Dataset](group%202.png){#mapping}
+
+```{r}
+# Step 1: Merge Individuals.csv and User.csv into Userinfo.csv with "UserID" as the primary key
+userinfo <- full_join(individual, user, join_by(UserID)) |> 
+  write_csv("userinfo.csv")
+
+#Match
+# The foreign key of the table is UserID, to check the match of the foreign key between differet tables, we use anti_join() function. For function anti_join(X,Y,by = "UserID"), it will returns the rows from X that do not have a match in Y based on "UserID".
+anti_join(userinfo,daydata,by="UserID") # The results show that some UserID appear in the userinfo dataset but not in the daydata dataset
+anti_join(daydata,userinfo,by="UserID") # The results show that all UserIDs that appear in the daydata dataset are in the userinfo dataset.
+anti_join(userinfo,weekdata,by="UserID") # Some UserID appear in the userinfo dataset but not in the weekdata dataset
+anti_join(weekdata,userinfo,by="UserID") # All UserIDs that appear in the WeekData dataset are in the userinfo dataset.
+
+#To check one-to-one, one-to-many or many-to-many, just to check the number of occurrences of the same UserID in different datasets.
+userinfo |>
+  count(UserID) |>
+  filter(n > 1) # Each userid only appears once in the userinfo dataset.
+
+daydata |>
+  count(UserID) |> # Each userid appears several times in the daydata dataset.
+  filter(n > 1)
+
+weekdata |>
+  count(UserID) |> #  Each userid appears several times in the weekdata dataset.
+  filter(n > 1)
+
+# so the the relationship between userid and daydata and that between userid and week data are both one-to-many.
+```
+
+# 2. Individual Visualization
+
+## 2.1 Participants' decisions about sporting, snacking and alcohol use by gender
+
+Author: Yunhua Tan
+
+Student ID: 14413043
+
+### Research Question
+
+RQ1: How do people's decisions about sporting, snacking, and alcohol use change over the course of the six-week experiment?
+
+RQ2: Are there any noticeable changes related to gender?
+
+### Observations
+
+RQ1:
+
+-The average level of participants' decisions about sporting remains relatively stable over the six-week experiment, with values fluctuating around 5.2 to 5.3.
+
+-The average level of participants' decisions about snacking activity also shows minimal variation over the six weeks, with values hovering around 2.5.
+
+-The average level of participants' decisions about alcohol use remains relatively consistent over the six-week period, with values fluctuating around 3.6.
+
+-Overall, based on the average decisions levels, it appears that there are no obvious changes in sporting, snacking, and alcohol use over the course of the six-week experiment.
+
+RQ2:
+
+-There is no obvious variation in the average level of decisions about sporting between males and females over the six weeks. Males show a slightly higher average level of sporting decisions compared to females, with values fluctuating between 5.06 to 5.45 for males and between 5.18 to 5.27 for females.
+
+-The average level of decisions about snacking exhibits some variation between males and females. Males generally show a slightly higher average level of snacking activity compared to females, with values fluctuating between 2.74 and 2.94 for males and between 2.36 and 2.45 for females.
+
+-The average level of decisions about alcohol use also shows no variation between males and females. Males and females exhibit slight differences in the average level of alcohol use, with values fluctuating between 3.58 and 3.73 for males and between 3.58 and 3.70 for females.
+
+Overall, there are no noticeable differences between males and females for average level of decisions about sporting and alcohol use. Males generally show a slightly higher average level of decisions about snacking compared to females.
+
+```{r}
+# Read the PreSurvey.csv and WeekData.csv files
+preSurveyData <- read.csv("Userinfo.csv") 
+weekData <- read.csv("WeekData.csv") 
+
+# what:Merge the two datasets on UserID #why:Merging datasets allows for combined analysis of information related to user surveys and weekly data.
+mergedData <- merge(weekData, preSurveyData, by = "UserID")
+
+# what:Convert Gender to a factor for clarity in plots #why:enhances the interpretability of gender-related information in subsequent plots.
+mergedData$Gender <- factor(mergedData$Gender, labels = c("Male", "Female")) 
+
+#what:Calculates average values for decision-related variables by week.#why:This is crucial for understanding trends and patterns in decision-making over the course of the six-week experiment.
+avgDecisionByWeek <- mergedData %>%
+  group_by(week_nr) %>%
+  summarise(AvgSporting = mean(Sport_Int2, na.rm = TRUE),
+            AvgSnacking = mean(Snack_Int2, na.rm = TRUE),
+            AvgAlcoholUse = mean(Alc_Int2, na.rm = TRUE)) 
+
+# RQ1: Plot changes over the six-week experiment
+# Initializes the plot with "week_nr" on the x-axis.
+plot1 <- ggplot(avgDecisionByWeek, aes(x = week_nr)) +
+  geom_line(aes(y = AvgSporting, color = "Sporting")) +
+  geom_line(aes(y = AvgSnacking, color = "Snacking")) +
+  geom_line(aes(y = AvgAlcoholUse, color = "Alcohol Use")) + 
+#Adds three lines to the plot with different colors. #why:visually represents changes in the average levels of decisions about sporting, snacking, and alcohol use over the six-week period.
+  labs(title = "Changes in Sporting, Snacking, and Alcohol Use Over Six Weeks",
+       x = "Week Number",
+       y = "Level of Decisions") + 
+#what: Adds labels to the plot for better interpretation.#why:Clear labels enhance the plot's interpretability
+  scale_color_manual(values = c("Sporting" = "blue", "Snacking" = "green", "Alcohol Use" = "red")) + # what:Manually sets colors for each variable
+  theme_minimal() +
+ ylim(1, 7) 
+#what: Applies a minimal theme and sets the y-axis limits between 1 and 7. why:ensures that the plot focuses on a specific range
+
+# Change font size to 4
+plot1 <- plot1 +
+  theme(text = element_text(size = 7))
+
+# RQ2: changes relate to gender over the six-week experiment
+avgDecisionByGender <- mergedData %>%
+  group_by(week_nr, Gender) %>% 
+#what: group the 'mergedData' by week number and gender, and then calculates the average values for the specified activity-related variables. why:comparison of average decision levels across different weeks and genders.
+  summarise(AvgSport_Int2 = mean(Sport_Int2, na.rm = TRUE),
+            AvgSnack_Int2 = mean(Snack_Int2, na.rm = TRUE),
+            AvgAlcoholUse = mean(Alc_Int2, na.rm = TRUE)) 
+# what:Computes the average values and remove missing values. #why: facilitating meaningful comparisons between weeks and genders.Handling missing values is crucial to ensure accurate and unbiased calculations of averages.
+
+# Plot for Sport_Int2
+plot2 <- ggplot(avgDecisionByGender, aes(x = week_nr, y = AvgSport_Int2, color = Gender)) +
+  geom_line() +
+  labs(title = "Average Sporting by Gender Over Six Weeks",
+       x = "Week Number",
+       y = "Average Sporting") + 
+#what:mapping week number to the x-axis, average sporting decisions ("AvgSport_Int2") to the y-axis, and differentiating lines by gender. #why:how the average sporting decision levels change over the course of six weeks,and gender differences
+  theme_minimal()+
+  ylim(1, 7)
+# what:Applies a minimal theme and sets the y-axis limits between 1 and 7. #why:provides a clean and uncluttered appearance, ensures that the plot focuses on a specific range of average sporting decision levels.
+
+# Plot for Snack_Int2
+plot3 <- ggplot(avgDecisionByGender, aes(x = week_nr, y = AvgSnack_Int2, color = Gender)) +
+  geom_line() +
+  labs(title = "Average Snacking by Gender Over Six Weeks",
+       x = "Week Number",
+       y = "Average Snacking") +
+#what:mapping week number to the x-axis, average snacking decisions ("AvgSnack_Int2") to the y-axis, and differentiating lines by gender. #why:how the average snacking decision levels change over the course of six weeks,and gender differences
+  theme_minimal() +
+  ylim(1, 7)
+# what:Applies a minimal theme and sets the y-axis limits between 1 and 7. #why:provides a clean and uncluttered appearance, ensures that the plot focuses on a specific range of average snacking decision levels.
+
+# Plot for Alcohol Use
+plot4 <- ggplot(avgDecisionByGender, aes(x = week_nr, y = AvgAlcoholUse, color = Gender)) +
+  geom_line() +
+  labs(title = "Average Alcohol Use by Gender Over Six Weeks",
+       x = "Week Number",
+       y = "Average Alcohol Use") +
+#what:mapping week number to the x-axis, average alcohol use decisions ("AvgAlcoholUse") to the y-axis, and differentiating lines by gender. #why:how the average alcohol use levels change over the course of six weeks,and gender differences
+  theme_minimal()+
+  ylim(1, 7)
+# what:Applies a minimal theme and sets the y-axis limits between 1 and 7. #why:provides a clean and uncluttered appearance, ensures that the plot focuses on a specific range of average alcohol use decision levels.
+
+# Change font size to 4 for plot2
+plot2 <- plot2 +
+  theme(text = element_text(size = 7))
+
+# Change font size to 4 for plot3
+plot3 <- plot3 +
+  theme(text = element_text(size = 7))
+
+# Change font size to 4 for plot4
+plot4 <- plot4 +
+  theme(text = element_text(size = 7))
+
+combined_plot <- plot_grid(plot1, plot2, plot3, plot4, nrow = 2) #what:# Combine the plots using plot_grid() #why:Combining multiple plots into a single composite plot is beneficial for presenting related visualizations together. 
+
+# View the combined plot
+print(combined_plot)
+```
+
+## 2.2 Participants' daily frequencies of sporting, snacking and alcohol use by education level
+
+Author: Dongdong Zhu
+
+Student ID: 13523171
+
+### Research Question
+
+What is the correlation between participants' education level and their daily frequencies of alcohol consumption, snack intake and sport engagement?
+
+### Observations
+
+The data is from two original data sets: education information from Presurvey.csv and daily records of alcohol, snack and sports activities from Daydata.csv during a six-week period. The plot is generated using the Plotly package, featuring a scatterplot where each point corresponds to a user's recording. The colors represent their education levels, categorized into HBO, university bachelor, and master's degrees. A range slider is provided, allowing readers to selectively focus on specific time periods.Overall, it can be observed that master's students are less likely to consume alcohol comparted to the other two groups, while a few bachelor's students (UserID: 281, 412, 423) exhibit significantly higher alcohol consumption. In terms of snack intake, the average level of master's student is also lower compared to the other groups. When it comes to the time spent on sport, the majority of bachelor's students maintain a more regular sports routine, while students in HBO tend to spend more time on sports than the average level.
+
+```{r}
+#Join two datasets which contain necessary information to answer the research question
+individual_day <- left_join(daydata, individual, "UserID") |> 
+  select(UserID, StartDate, Educ_year, Educ, Alc_Freq, Alc_Occ, Sport_Freq, Sport_Occ, Snack_Freq, Snack_Occ) |> 
+  #Clean data and convert the variable to factors and numeric variables accordingly
+  #Mark individuals from other education levels as NA
+  mutate(Educ = as.factor(ifelse(Educ == 4, NA, Educ)), 
+         #Convert those who reported they did not have alcohol to have a frequency of 0, and tidy up the data
+         Alc_Freq = as.numeric(ifelse(grepl("[a-zA-Z]", Alc_Freq), NA, ifelse(Alc_Occ == 1, 0, Alc_Freq))),
+         #Convert those who reported they did not have snack consumption to have a frequency of 0, and tidy up the data
+         Sport_Freq = as.numeric(ifelse(grepl("[a-zA-Z]", Sport_Freq), NA, ifelse(Sport_Occ == 1, 0, Sport_Freq))),
+         #Convert those who reported they did not have sport to have a frequency of 0, and tidy up the data
+         Snack_Freq = as.numeric(ifelse(grepl("[a-zA-Z]", Snack_Freq), NA, ifelse(Snack_Occ == 1, 0, Snack_Freq)))
+  ) |> 
+  #Rank the sport time and mark those who have unreasonale sport time (> 300mins/day) as NA
+  arrange(desc(Sport_Freq)) |> 
+  mutate(Sport_Freq = ifelse(Sport_Freq > 300, NA, Sport_Freq)) 
+
+#Convert the StartDate to datetime format
+individual_day$datetime <- ymd_hms(individual_day$StartDate) 
+
+#Create Educ_label to represent the levels of Edcu
+individual_day$Educ_Label <- factor(individual_day$Educ, labels = c("HBO", "Bachelor", "Master"))
+
+#Delete rows containing missing values
+individual_day <- na.omit(individual_day)
+
+#Create a plot with x to time, y to alcohol frequency and color to education levels
+plot_alcohol <- 
+  plot_ly(
+    data = individual_day, 
+    x = ~datetime, 
+    y = ~Alc_Freq, 
+    color = ~Educ_Label
+  ) |> 
+  #Add markers with specified opacity, size and text without the legend
+  add_markers(
+    marker = list(opacity = 0.6, size = 4), 
+    showlegend = FALSE,
+    hovertemplate = ~paste("UserID: ", UserID, "<br>Day: ", datetime, "<br>Alcohol Frequency: ", Alc_Freq)) |> 
+  #Produce the title of Y axis
+  layout(
+    xaxis = list(title = ""),
+    yaxis = list(title = "Alcohol Freq (glasses)", titlefont = list(size = 10))
+  )
+
+#Create a plot with x to time, y to snack frequency and color to education levels
+plot_snack <- 
+  plot_ly(
+    data = individual_day, 
+    x = ~datetime, 
+    y = ~Snack_Freq, 
+    color = ~Educ_Label
+  ) |> 
+  add_markers(
+    marker = list(opacity = 0.6, size = 4), 
+    showlegend = FALSE,
+    hovertemplate = ~paste("UserID: ", UserID, "<br>Day: ", datetime, "<br>Snack Frequency: ", Snack_Freq)
+  ) |> 
+  layout(
+    xaxis = list(title = ""),
+    yaxis = list(title = "Snack Freq (occasions)", titlefont = list(size = 10))
+  )
+
+#Create a plot with x to time, y to sport frequency and color to education levels
+plot_sport <- 
+  plot_ly(
+    data = individual_day, 
+    x = ~datetime, 
+    y = ~Sport_Freq, 
+    color = ~Educ_Label
+  ) |>
+  add_markers(
+    marker = list(opacity = 0.6, size = 4),
+    hovertemplate = ~paste("UserID: ", UserID, "<br>Day: ", datetime, "<br>Sport Frequency: ", Sport_Freq)
+  ) |> 
+  layout(
+    xaxis = list(title = ""),
+    yaxis = list(title = "Sport Time (mins)", titlefont = list(size = 10))
+  )
+
+#Create a new plot to combine three plots, share the X axis and Y axis
+plot_lifestyle <- 
+  subplot(plot_alcohol, plot_snack, plot_sport, nrows = 3, shareX = TRUE, shareY = TRUE, which_layout = "merge") |> 
+  #Add range slider and annotations
+  layout(xaxis = list(
+         rangeslider = list(
+         visible = TRUE, 
+         thickness = 0.05,
+         range = range(individual_day$datetime),  
+         bgcolor = "lightgrey",  
+         tickformat = "%Y-%m-%d")),
+    annotations = list(
+      list(text = "Frequency of Alcohol, Snack, and Sport by Education Level",
+           xref = "paper",
+           yref = "paper",
+           x = 0.5,
+           y = 1.08,
+           showarrow = FALSE,
+           font = list(size = 16)),
+      list(text = "Use the slider here to choose a time period",
+           xref = "paper",
+           yref = "paper",
+           x = 0.5,
+           y = - 0.3,
+           showarrow = FALSE,
+           font = list(size = 12))
+      ))
+
+plot_lifestyle
+
+```
+
+## 2.3 The impact of attitude and the sociality of social media posts on the self expectation of aggression, cognitive & behavioral impairments, self-perception, and tension of the participants when thinking of alcohol drinking
+
+Author: Zifan Huang
+
+Student ID: 14339595
+
+### Research Question
+
+1.  What is the impact of attitude of social media posts on the self expectation of aggression, cognitive & behavioral impairments, self-perception, and tension of the participants when thinking of alcohol drinking?
+2.  What is the interaction effect of post attitude and the sociality of post on the four different expectations about alcohol drinking?
+
+### Observations
+
+This graph shows the impact of attitude (negative/positive) and the sociality (People Visible/Not Visible) of social media posts on four different expectations about alcohol drinking tested in a 2x2 between-subject experimental design. To test the causal relationship, the student participants were randomly assigned to the four conditions and were given Fake social media posts manipulated by the researchers. The experiment took 3 weeks and the students’ expectations of imagining themselves drinking alcohol were recorded before and after the experiment.
+
+In the graph, the dependent variable (expectation) is displayed on the y-axis, with four facets standing for four different types of expectations. The y values are calculated by subtracting the expectations before the experiment from the expectations after the experiment to get the expectation change due to the experiment. The points display the average expectation change across all the participants in each experimental condition with their error bars indicating the variation of the expectation change in the margin of one standard deviation. The positive y value indicates positive expectation change (e.g. more aggression/cognitive & behavioral impairments/positive self-perception/tension) [@ham2005]. In contrast, the negative value indicates negative change (0 means no change, which is displayed by the red reference lines). One independent variable, the attitude of the social media post, is shown in the x-axis, with two levels (positive/negative). The other independent variable, the sociality of the fake post, is displayed through color and point shape (blue circle points stand for posts with no people visible, while green triangle points stand for posts with people visible).
+
+Before plotting, I assume that negative social media posts about alcohol may lead to expectations of more aggression, more cognitive & behavioral impairments, more negative self-perception, and more tension, which urge the participants to become less alcoholic. I also assume the sociality of the posts may expend the social influence of the post attitudes on expectations, which means, for example, higher sociality may make the negative post arouse even stronger expectations of being aggressive, and make the positive posts arouse weaker expectations of being aggressive. However, the graph shows that the post attitude has scarcely any impact on the change of expectation. All four types of changes of expectation do not differ between the positive and negative post conditions as the height between the two points does not change much and is within the margin of the error bars of each other. The interaction effect between the sociality and attitude of the post is also not obvious as the lines of different colors are almost horizontal in each facet.
+
+An interesting exploratory finding is that no matter in which experimental condition, the participants tend to have slightly more tension when thinking about drinking alcohol according to the facet at the right-bottom (the points are above average more than the other expectations). This may indicate some test effects of the experiment as the participants think and worry about alcohol issues more in the experiment than they were before the experiment. However, this effect is also within the margin of the error bar, so more detailed statistical analysis is required to see if the test effect is significant.
+
+```{r}
+# Data wrangling
+User_join <- userinfo |>  # create a new dataset user_join from the Userinfo dataset
+  filter(UserRole == "participant") |> # keep all the observations relating to the true participants
+  select(UserID, post_attitude, post_social) # select the foreign key "UserID" and the two variables
+
+Week_join <- weekdata |> # create a new dataset Week_join from the WeekData dataset
+  filter(week_nr == 3 | week_nr == 6 ) |> 
+  # keep all the observations recorded at the end of week 3 and week 6 during which the experiment take place.
+  # I will subtract the certain alcohol-related expectation collected at the end of week 3 from week 6 to get the change of expectation.
+  # I select these data because I am only interested the effect of the two experimental-manipulated variables on expectation. The data in other weeks are not necessary for this research interest.
+  mutate( # create four new variables (principal components) from the items of the B-CEOA Expectancies (ham et al., 2005)
+    Alc_SP = (Alc_Ass2 + Alc_Ass7)/2, # the first component is self-perception, calculated from the average of "guilty"(Alc_ASS2) and "moody"(Alc_ASS7) item. 
+    Alc_CBI = (Alc_Ass9 + Alc_Ass10)/2, # the second component is cognitive-behavioral impairment, calculated from the average of "dizzy"(Alc_ASS9) and "clumsy"(Alc_ASS10) item.
+    Alc_AG = (Alc_Ass3 + Alc_Ass8)/2, # the third component is aggression, calculated from the average of "aggressive"(Alc_ASS3) and "noisy"(Alc_ASS8) item.
+    Alc_TS = (Alc_Ass5 + Alc_Ass6)/2, # the fourth component is tension, calculated from the average of "relaxed"(Alc_ASS5) and "calm"(Alc_ASS6) item.
+  ) |> # I pick these four components and related items because they are typical negative consequences caused by drunkenness
+  select(UserID, week_nr, Alc_SP, Alc_CBI, Alc_AG, Alc_TS) |> # select the foreign key "UserID", week_nr, and the four variables
+  distinct(UserID, week_nr, .keep_all = TRUE) |> # some participants may fill in the survey multiple times a week, making further analysis impossible, so I only keep one survey per participant per week.
+  pivot_wider(names_from = week_nr, values_from = c(Alc_SP, Alc_CBI, Alc_AG, Alc_TS)) |> # transform the independent variables to wide format for calculating the change of expectation 
+  mutate(
+    Alc_SP = -(Alc_SP_6 - Alc_SP_3),
+    Alc_CBI = Alc_CBI_6 - Alc_CBI_3,
+    Alc_AG = Alc_AG_6 - Alc_AG_3,
+    Alc_TS = -(Alc_TS_6 - Alc_TS_3)
+  ) # create new columns of the four variables for the expectation change, calculating by subtracting the week 3 data from the week 6 data for each type of expectation
+# the self-perception and tension are calculated by the opposite number of the subtraction result because in the original items, higher score indicating negative self-perception and less tension.
+# Therefore, to make the graph easier for direct interpretation according to the labels, I reverse the value upside down. 
+
+
+week_user <- User_join |> 
+  full_join(Week_join, by = "UserID")
+# create a new dataset "week_user" and merge the two dataset together by full_join() according to the foreign key "UserID". 
+# all the variables of interest are included in this dataset for further plotting
+
+
+# Data Visualization
+week_user |> 
+  group_by(post_attitude, post_social) |> # group the data by the two independent variables
+  summarise( # calculate the mean and standard deviation of the four expectations according to the levels within the two independent variables
+    avg_SP = mean(Alc_SP, na.rm = TRUE),
+    sd_SP = sd(Alc_SP, na.rm = TRUE),
+    avg_CBI = mean(Alc_CBI, na.rm = TRUE),
+    sd_CBI = sd(Alc_CBI, na.rm = TRUE),
+    avg_AG = mean(Alc_AG, na.rm = TRUE),
+    sd_AG = sd(Alc_AG, na.rm = TRUE),
+    avg_TS = mean(Alc_TS, na.rm = TRUE),
+    sd_TS = sd(Alc_TS, na.rm = TRUE),
+  ) |> 
+  pivot_longer(
+    cols = starts_with("avg_") | starts_with("sd_"),
+    names_to = c(".value", "y_variable"),
+    names_sep = "_"
+  ) |> # transform the dataset from wide format to the long format because facet_wrap() requires the variables being faceted in the long format
+  mutate(
+    y_variable = case_when(
+      y_variable == "AG" ~ "Aggression",
+      y_variable == "TS" ~ "Tension",
+      y_variable == "CBI" ~ "Cognitive & Behavioral Impairment",
+      y_variable == "SP" ~ "Self-perception",
+    ) # rename the abbreviated level labels in the y_variable into their full names, which will become the label of each facets in the plot.
+  ) |>
+  ggplot(aes(x = post_attitude, y = avg,  # set the mapping of the plot
+             color = post_social, shape = post_social)) + 
+  geom_line(aes(group = post_social)) + # add a line for each level of post_social
+  geom_errorbar(aes(ymin = avg - sd, ymax = avg + sd), # add the error bar for the points to show the variation of the change of expectations for different participants
+                width = 0.2, # set the horizontal width of the error bars 
+                position = position_dodge(width = 0.1)) + # specify the position of the bars by dodging them horizontally, avoiding overlaps between bars from different points
+  geom_point(size = 4, # add points and set the point size of 4
+             position = position_dodge(width = 0.1)) + # specify the position of the points by dodging them horizontally, avoiding overlaps between points
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red", linewidth = 0.5) + # add a red dashed reference line on y=0 to help readers compare expectation changes to no changes (y=0) 
+  facet_wrap(~ y_variable, ncol = 2)+ # add 4 facets for the four expectations, set the mapping of 2 rows x 2 columns
+  labs(
+    title = "The Attitude and Sociality of the Social Media Post About Alcohol have scarcely \nno impact on Alcohol Drinking Values and Expectations.", 
+    subtitle = "All the interaction effect of the post attitude and sociality is not obvious.\nThe y-axis evaluates the average expectation change due to the experiment conditions. \nDifferent facets are for different expectations showed in the facet label.",
+    caption = "Source: ASCoR, Hanneke Hendriks",
+    x = "The Attitude of the Fake Post About Alcohol",
+    y = "Level of Certain Expectation of Drinking Alcohol"
+  ) + # add title, subtitle, caption, x label and y label.
+  theme_bw(base_size = 10) + # make the main theme white background and set the font size of all the text in the plot 10.
+  theme( # all the codes in theme() is to make the plot looks clearer and nicer
+    legend.box.background = element_rect(color = "black"), # set the rectangular legend box to be black
+    plot.title = element_text(face = "bold"), # bold the text of the plot title
+    plot.title.position = "plot", # set the position of title above the plot
+    plot.caption.position = "plot", # set the position of caption below the plot
+    plot.caption = element_text(hjust = 1), # set the position of the caption at the right-bottom 
+    axis.text.x = element_text(face = "bold"), # bold the x label
+    axis.text.y = element_text(face = "bold"), # bold the y label
+    strip.text = element_text(face = "bold") # bold the facet labels
+  ) +
+  scale_x_discrete(labels = c("Negative" = "Negative Post" , "Positive" = "Positive Post")) + # rename the levels of the x axis
+  scale_color_manual( # rename the title, levels of colored variable (the Sociality of the Fake Post), and reset the colors to help color-blind people identify different colors (levels)
+    name = "The Sociality of the Fake Post", 
+    labels = c("Non-Social" = "No People Visible" , "Social" = "People Visible" ), 
+    values = brewer.pal(8, "Accent")[c(5, 1)] 
+  ) +
+  scale_shape_discrete( # rename the title, levels of the variable whose levels are discriminated by point shape (the Sociality of the Fake Post). I use color and shape to discriminate different values to make the discrimination clearer in the plot.
+    name = "The Sociality of the Fake Post", 
+    labels = c("Non-Social" = "No People Visible" , "Social" = "People Visible" )
+  ) 
+```
+
+## 2.4 The Daily Drinking Occurrence in Different Experimental Condition
+
+Author: Haochuan Liu
+
+Student ID: 14498766
+
+### Research Question
+
+How did the daily drinking occurrences change in each experimental group?
+
+### Observations
+
+My research question focuses on the daily changes in the total number of drinkers within each experimental group. By looking at the trends, we can learn more about how different experimental conditions affect people's drinking behavior.
+
+The experiment lasted 3 weeks and was a 2x2 design. One condition was the post attitude (Negative vs Positive). Half the participants exposed posts with negative attitudes towards alcohol drinking everyday, while the other participants exposed posts with positive attitudes towards alcohol drinking. The other condition was the post social(Social vs Non-social). "Social" means that participants exposed posts showing party drinking, while "Non-social" means that participants exposed posts showing drinking alone. When looking at the figure, please press "play" or drag the slider. You can drag the slider back and forth to see the daily data situation.Hovering over the figure also shows the labels
+
+Through figure, we found different conditions have similar trends, which showed that the experimental condition had little influence on people's drinking behavior. However, we also found that the lines of different condition were regular fluctuate and all peaked at weekend. People's drinking behavior is influenced by the date and they like to enjoy drinking at the weekend. This is in line with common sense and an additional finding of our figure.
+
+```{r}
+userexperiment <- userinfo |>
+  mutate(condition = paste (post_attitude,post_social,sep = "/"))
+start_date <- make_date(year = 2018, month = 3, day = 28)
+g_data <- daydata |> 
+  filter(complete.cases(UserID)&complete.cases(Alc_Occ)) |>
+  left_join(userexperiment,by=join_by(UserID)) |>
+  group_by(condition,day_nr) |>
+  summarise(sum(Alc_Occ == 2))|>
+  filter(day_nr >= 22 & day_nr <= 43) |>
+  mutate(date = start_date + days(day_nr - 22)) |>
+  rename(freq_drinks = `sum(Alc_Occ == 2)`) |>
+  mutate(weekend = weekdays(date) %in% c("Saturday","Sunday"))
+accumulate_by <- function(dat, var) {
+  var <- lazyeval::f_eval(var, dat)
+  lvls <- plotly:::getLevels(var)
+  dats <- lapply(seq_along(lvls), function(x) {
+    cbind(dat[var %in% lvls[seq(1, x)], ], frame = lvls[[x]])
+  })
+  dplyr::bind_rows(dats)
+}
+g_data2 <- g_data |>
+  accumulate_by(~date)
+p <- ggplot(g_data2,aes(date,freq_drinks,frame = frame)) +
+  geom_line(color = "cadetblue4") +
+  theme_minimal() +
+  facet_wrap(~condition) +
+  geom_vline(xintercept = as.numeric(g_data2$date[g_data2$weekend]), linetype = "dashed", color = "darkorange") +
+  geom_text(aes(x = as.Date("2018-03-31") , y = max(freq_drinks) * 0.93, label = "weekend"),
+            vjust = 0, hjust = 0, color = "black", size = 3) +
+   geom_text(aes(x = as.Date("2018-04-07") , y = max(freq_drinks) * 0.93, label = "weekend"),vjust = 0, hjust = 0, color = "black", size = 3) +
+  geom_text(aes(x = as.Date("2018-04-14") , y = max(freq_drinks) * 0.93, label = "weekend"),vjust = 0, hjust = 0, color = "black", size = 3) +
+  xlab("Date") +
+  ylab("Drinking Occurrence") +
+  scale_x_date(breaks = as.Date(c("2018-03-31","2018-04-07","2018-04-14")), labels = c("Mar31", "Apr7","Apr14"))
+fig <- ggplotly(p) |>
+  layout(
+    title = "The Daily Drinking Occurrence in Different Experimental Condition",
+    yaxis = list(
+      zeroline = F
+    ),
+    xaxis = list(
+      zeroline = F, 
+      showgrid = F
+    )
+  ) |>
+  animation_opts(
+    frame = 100, 
+    transition = 0, 
+    redraw = FALSE
+  ) |>
+  animation_slider(
+    currentvalue = list(
+      prefix = "Day "
+    )
+  )
+fig
+```
+
+## 2.5 The daily alcohol use frequency by sex and condition
+
+Author: Jiakun Liang
+
+Student ID: 13004344
+
+### Research Question
+
+How did the daily drinking frequency (number of glasses) change for males and females in each experimental group?
+
+### Observations
+
+The graph describes how many glasses of alcohol used by students during a period of 43 days. During the first three weeks, students saw posts by other participants. In the last three weeks, they also saw posts by fake participants (the researcher). The latter posts had a negative or positive context, and they were social or not social (i.e., no people visible). Groups were randomly assigned to one of the four conditions in this 2 (negative versus positive) x 2 (not social versus social) between subjects experimental design. In the graph, the x-axis represents the day number, the y-axis represents alcohol use frequency (number of glasses of alcohol they used), and the vertical dotted lines indicate the start day of introducing the experimental manipulation. Lines are drawn connecting points on the plot, and the lines are colored based on their sex (blue for male, red for female). The plot is divided into multiple panels, each representing a different level of condition (negative/social, negative/non-social, positive/social, positive/non-social).
+
+Following the introduction of experimental manipulation at the three-week mark (21 days), there appears to be a consistent pattern in alcohol use for both males and females. Interestingly, males consistently exhibit a higher frequency of alcohol consumption compared to females across all four experimental conditions. The observed patterns suggest that the experimental manipulation did not lead to discernible differences in alcohol use behavior between genders, reinforcing the overall trend of higher alcohol consumption among males throughout the analyzed conditions.
+
+```{r}
+#Initializes a new data frame or tibble named Alcohol_Table and pipes the user data frame into it.
+Alcohol_Day <- userinfo |>
+  #Left-joins the daydata and individual data frame with the user data frame based on the common column UserID. 
+  left_join(daydata, join_by(UserID)) |>
+  #Keep only the columns UserID, day_nr, Gender, Alc_Freq, and Condition, which are relevant to the research question, and arrange rows of the data frame in ascending order based on the UserID column.
+  mutate(condition = paste (post_attitude,post_social,sep = "/"))|>
+  select(UserID, day_nr, Gender, Alc_Freq, condition) |>
+  arrange(UserID) |>
+  #Remove rows with missing UserID values
+  filter(!is.na(UserID)) 
+
+##Visualization
+#Convert the Alc_Freq column to numeric format while removing any missing values during the conversion.
+Alcohol_Day$Alc_Freq <- as.numeric(Alcohol_Day$Alc_Freq, na.rm = TRUE) 
+#Convert the Gender column to character format while removing any missing values during the conversion.
+Alcohol_Day$Gender <- as.character(Alcohol_Day$Gender, na.rm = TRUE) 
+#Group the data by day_nr, Gender, and Condition, calculate the mean of Alc_Freq within each group, filter out rows with missing "Condition" values, recode the Gender column to sex to clearly represent different genders, and then filter out rows with missing Sex values.
+Alcohol_Day |>
+  filter(!is.na(condition)) |>
+  filter(!is.na(Gender)) |>
+  group_by(day_nr, Gender, condition) |>
+  summarise(Alc_con = mean(Alc_Freq, na.rm = TRUE)) |>
+  filter(!is.na(Alc_con)) |>
+  mutate(Sex = case_when(
+    Gender == "1" ~ "male",
+    Gender == "2" ~ "female")) |>
+  #Create a ggplot object with the specified aesthetics and layers. It generates a line plot of alcohol use frequency over day number, colored by sex, with separate facets for different conditions. It adds vertical dotted lines at x = 22， representing the start day of manipulation introduction, with text annotations at aesthetically comfortable coordinates. Finally, it sets the plot title and axis labels.
+  ggplot(aes(x = day_nr, y = Alc_con, group = Sex, color = Sex)) +
+    geom_line() +
+    scale_color_manual(values = c("male" = "blue", "female" = "red")) +
+    facet_wrap(~condition) +
+    geom_vline(xintercept = 22, linetype="dotted") +
+    annotate("text", x = 28, y = 22, label = "manipulation", vjust = 0, hjust = 0, size = 2) +
+    annotate("text", x = 5, y = 22, label = "no manipulation", vjust = 0, hjust = 0, size = 2) +
+    labs(title = "Alcohol use frequency by sex and condition",
+       x = "Day number",
+       y = "Alcohol use frequency/glasses")
+```
