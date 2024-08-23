@@ -3,6 +3,7 @@ layout: post
 title: "[Workshop] Revolution by Other Memes: Online Subcultures, Modular Ideologies and the Political Compass"
 date: 2023-07-30
 tags: [research]
+thumbnail: "images/political_compass/results_of_pixplot_analysis.png"
 comments: true
 author: Dongdong
 ---
