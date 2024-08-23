@@ -29,7 +29,7 @@ My research interests lie in exploring the social implications of artificial int
 - 2023.07, Workshop, *Revolution By Other Memes: Online Subcultures, Modular Ideologies And The Political Compass*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/political_compass/)<br>
 
 <h4>Data Visualization</h4>
-- 2024.01, Group coursework, *Visualization of University Students' Alcohol Use, Snack Consumption, and Sports Participation*, Using R for Data Wrangling, Analysis and Visualization, University of Amsterdam [Demo] [[Code]](https://github.com/CeciliaZhu1997/My-Code/blob/main/alcohol_use.qmd)
+- 2024.01, Group coursework, *Visualization of University Students' Alcohol Use, Snack Consumption, and Sports Participation*, Using R for Data Wrangling, Analysis and Visualization, University of Amsterdam [[Code]](https://github.com/CeciliaZhu1997/My-Code/blob/main/alcohol_use.qmd)
 - 2023.07, Workshop, *The Divine Online? Mapping Algorithmic Conspirituality on TikTok*, Digital Methods Initiative Summer School, University of Amsterdam [[Link]](https://ceciliazhu1997.github.io/tiktok_conspirituality/)<br>
 
 <h4>Qualitative Studies</h4>
