@@ -1,0 +1,30 @@
+---
+layout: page
+title: Research
+permalink: /research/
+---
+{% assign research_posts = site.tags.research %}
+
+{% if research_posts == null or research_posts.size == 0 %}
+  <h2>No post found</h2>
+{% endif %}
+
+<div class="tags">
+  {% if research_posts %}
+    <ul class="tag">
+      {% for post in research_posts %}
+        {% if post.title %}
+          <li>
+            <a href="{{ post.url | relative_url }}">
+              {% if post.thumbnail %}
+                <img src="{{ post.thumbnail }}" alt="{{ post.title }} thumbnail" class="post-thumbnail">
+              {% endif %}
+              {{ post.title }}
+            </a>
+            <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
